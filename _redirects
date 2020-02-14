@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://joshingmachine.netlify.com/* https://www.joshingmachine.com/:splat 301!

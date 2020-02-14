@@ -1,0 +1,89 @@
+==================================================================
+https://keybase.io/joshingmachine
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://joshingmachine.com
+  * I am joshingmachine (https://keybase.io/joshingmachine) on keybase.
+  * I have a public key with fingerprint 2219 F9DC F2B3 5E07 5746  3C30 79CE 8351 42DD 275D
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012002c02ce09214ee45ae163258dae24956eb145a4bcf318c694f491d9bd499aa370a",
+      "fingerprint": "2219f9dcf2b35e0757463c3079ce835142dd275d",
+      "host": "keybase.io",
+      "key_id": "79ce835142dd275d",
+      "kid": "0101387208b0dadf214e3b51e9220f087c3cb3bebd42d4a7a357908a535696c6f7480a",
+      "uid": "55fee479594f60fa3560e8c6bb1df119",
+      "username": "joshingmachine"
+    },
+    "merkle_root": {
+      "ctime": 1581643236,
+      "hash_meta": "caf68853d93fd5e4ac5f328f2c35fdd80b687594d4d9fef52ae86c5aa981f086",
+      "seqno": 14598761
+    },
+    "revoke": {
+      "sig_ids": [
+        "1a88285383f77878983fb67a4cad5a484770c9689d7fe345ef275c64cba6d0fb0f"
+      ]
+    },
+    "service": {
+      "hostname": "joshingmachine.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1581643238,
+  "expire_in": 157680000,
+  "prev": "120b1ee169138394afe62b4618faa3304500d668da89f1f8c16943233f0dd4d7",
+  "seqno": 28,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMP/AnicbVMPTFVVHH4kuIEjKNGhptnVBRqzc/+dew7+nc2hllpa0hR5O/eec+Dx
+5N3HfU/whbg5LERsgMqY0BCdWqmzOUqnqATh/EMJqKtUarqRMZWaqY00tHNZrq15
+d7d777nf7/t933d+pz1+mCcuKnKh9J25P6WsiupoK13jyZ734GaxZNo0IqUXS342
+9GCrKQuFvX4fldIlICsAKJa4GcCKrDGm6YTJUFV0RAlTNKxDZspiUTMtrsrIgljj
+GpYpNqmGMSGqAYiUJnFfIIc5QccXCAtaRZExx9TiiqnqDBi6oUHVUoGBLYZUXdYU
+ShVDp6Iw1w65FUKcSUJsms8Wa+LDOyTvGfinuoGsIkMByASUUO5KV01dZlhRAAfI
+sFTLVE0mRCpUIwZRdQMDRHRVhxhakBsaGtK9ZohO17lwbmBdmIOACzQETHg1TZly
+WcYuMMScAMlnAp1nh3KF3XxiiQeTStKkfOb4VzOvY9thN2Ir7HOBso5kqKmKCoVN
+Esr15rMwEfUW4RAhXaVY5VRnGrF0riqIK5aqc0oRMCEyhBSqUcwZ1xXCELR0QjCS
+hTco1IRYQcAWHTQdIwPKQoLDCm0/c7uHfDkivZCUvlKSCUKK6IRUbhjIQFi8mNAg
+mkWo2FKkGQawMESYGpypms64SNmCmmUSSAE3AZdWlbjdnEKfNUTubtczY5hm2flC
+WNCxw7Zlrxb/c8PhYCjdjSccCboFRcz0/kvlNX0BKopFRSFzQj47IMwI5P+TQ2kS
+Wxv0OczrcxG6AREQl9uHFQpKMb6mzMTAYjEOKtYIZ1AxNSgjLkZTBZoOAIVQzDLC
+XObIEkiXV+WAiniN/6JURKswyRGcIr8ACa9xxM62tWZFe6LiPMNjnnPPkicuNvHp
+CbtSlvD384lHs3tm/5xteJfs8adcDfXvfPHqvTNNTXzDX10ttc0PD45/f9PhOdkT
+oi4vr9vbU3Ulsv1Q/dp1RccDw6sSP79Upea9Mn3bzLGHd935dGBUT+ejfdOPRa5/
+M+5g/ImlXX+UdAZG7DYfdxU1nFs5dnDcvNvvTUFJT6K7HpwqDWauu5/8+4r1/GjF
+psUfv7BRWzG/rexatHpoR8O25Mun7Dwwb4fni5i68wONyb2NqLy1Oen4go6a+8ek
+1zZdOJvki18+ZevEW9+1d57o3nL+UPfksu1vxNd+vf/OR32zx/SVDqt9tWJW3IT+
+yvqxkz1LT/dvvlFbVLWifn15R3XG7YOZW1LHtDYv7a4unRC7MaNmfJ4VlbLqLrj/
+4fzXHX/WnJqFN7Unxcsaps1WCituNWpd4/YOHr20cOaMpKJgWm/vS20jGx7WDCx5
++eHEz8oTMhPzYurKdqGds3rKpiZNqs0I6iiVlA5cP/1DY0LGuy2L+s5Gso70VX5Q
+0F5+r7hxMLUhds9bA9XtW69tfvvmmZOPU7MPjNr9aDHw/3rp4uiWhSOOZO1rhhtG
+n/z+hid95rAY2DR67oLU5PaOnKbmN+VAde+fX4Ipy8pHRs/49lyuWXngqwTaFBef
+eeNuoDPySSfy/hZbMXVUfw9OWV5pBbsGFdw9p2XLROdHpTXjxPAndZMW1VcVJNVf
+jItNO7D4wv70Wb/s/geOsQW2
+=tI+w
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joshingmachine
+
+==================================================================
+

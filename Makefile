@@ -1,2 +1,2 @@
-deploy:
-	echo "TODO"
+build:
+	cp -r src/ dist/

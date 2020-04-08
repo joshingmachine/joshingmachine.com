@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <meta charset="utf-8" />
-        <title>Josh Smith</title>
-    </head>
-    <body>
-        <main>
-            <h1>Josh Smith</h1>
-            <p>Engineering manager at <a href="https://www.niche.com" style="color: #53a63a;">Niche</a>. <span id="bio-text"><noscript>Hates JavaScript.</noscript></span> He/him.</p>
-            <script>
-                const bioTexts = [
-                    'Lifelong Pittsburgher.',
-                    'Hufflepuff.',
-                    '[object Object].',
-                    'A 28-year-old healthy man trying his best.',
-                    'Hungry (for food, I\'m not ambitious).',
-                    'Ready for bed.',
-                ]
+---
+layout: no-header.html
+title: Josh Smith
+---
+<h1>Josh Smith</h1>
 
-                const bioTextIndex = Math.floor(Math.random() * Math.floor(bioTexts.length))
-                const bioText = bioTexts[bioTextIndex]
+<p>Engineering manager at <a href="https://www.niche.com" style="color: #53a63a;">Niche</a>. <span id="bio-text"><noscript>Hates JavaScript.</noscript></span> He/him.</p>
 
-                document.getElementById('bio-text').innerHTML = bioText
-            </script>
+<script>
+    const bioTexts = [
+        'Lifelong Pittsburgher.',
+        'Hufflepuff.',
+        '[object Object].',
+        'A 28-year-old healthy man trying his best.',
+        'Hungry (for food, I\'m not ambitious).',
+        'Ready for bed.',
+    ]
 
-            <a href="/contact">Contact</a>
-        </main>
-    </body>
-</html>
+    const bioTextIndex = Math.floor(Math.random() * Math.floor(bioTexts.length))
+    const bioText = bioTexts[bioTextIndex]
+
+    document.getElementById('bio-text').innerHTML = bioText
+</script>
+
+<a href="/contact">Contact</a>

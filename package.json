@@ -2,7 +2,8 @@
   "name": "joshingmachine.com",
   "version": "0.0.0",
   "scripts": {
-    "build": "cp -r src/ dist/",
+    "build": "eleventy",
+    "serve": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/joshingmachine/joshingmachine.com/issues"
   },
-  "homepage": "https://www.joshingmachine.com"
+  "homepage": "https://www.joshingmachine.com",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
 }

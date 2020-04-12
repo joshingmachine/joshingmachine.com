@@ -1,9 +1,62 @@
+---
+ageRating: 'General'
+description: "Josh Smith's personal website."
+themeColor: '#00000'
+---
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{ title }}</title>
+        <meta name="theme-color" content="{{ themeColor }}" />
+        <meta name="description" content="{{ description }}" />
+        <meta name="rating" content="{{ ageRating }}" />
+        <link rel="canonical" href="{{ 'https://www.joshingmachine.com' | append: page.url }}">
+
+        <!-- Facebook -->
+        <!-- <meta property="fb:app_id" content="123456789"> -->
+        <meta property="og:url" content="{{ 'https://www.joshingmachine.com' | append: page.url }}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ title }}">
+        {% if imagePath and imageAltText %}
+        <meta property="og:image" content="{{ imagePath }}">
+        <meta property="og:image:alt" content="{{ imageAltText }}">
+        {% endif %}
+        <meta property="og:description" content="{{ description }}">
+        <meta property="og:site_name" content="Josh Smith">
+        <meta property="og:locale" content="en_US">
+        <meta property="article:author" content="Josh Smith">
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@joshingmachine">
+        <meta name="twitter:creator" content="@joshingmachine">
+        <meta name="twitter:title" content="{{ title }}">
+        <meta name="twitter:description" content="{{ description }}">
+        {% if imagePath and imageAltText %}
+        <meta name="twitter:image" content="{{ imagePath }}">
+        <meta name="twitter:image:alt" content="{{ imageAltText }}">
+        {% endif %}
+        <!-- disallow Twitter from using your site's info for personalization purposes -->
+        <meta name="twitter:dnt" content="on">
+
+        <!-- Apple -->
+        <!-- Disable automatic detection and formatting of possible phone numbers -->
+        <meta name="format-detection" content="telephone=no">
+        <!-- Launch Icon (180x180px or larger) -->
+        <!-- <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png"> -->
+        <!-- Launch Screen Image -->
+        <!-- <link rel="apple-touch-startup-image" href="/path/to/launch.png"> -->
+        <!-- Launch Icon Title -->
+        <meta name="apple-mobile-web-app-title" content="Josh Smith">
+        <!-- Enable standalone (full-screen) mode -->
+        <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+        <!-- Status bar appearance (has no effect unless standalone mode is enabled) -->
+        <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+
+        <!-- Android -->
+        <!-- <meta name="mobile-web-app-capable" content="yes"> -->
     </head>
     <body>
         {{ content }}

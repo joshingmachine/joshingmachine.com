@@ -59,6 +59,14 @@ themeColor: '#00000'
         <!-- <meta name="mobile-web-app-capable" content="yes"> -->
     </head>
     <body>
-        {{ content }}
+        {% if hideSiteHeader != true %}
+        <header>
+            <a href="/">Josh Smith</a>
+        </header>
+        {% endif %}
+
+        <main id="main-content">
+            {{ content }}
+        </main>
     </body>
 </html>

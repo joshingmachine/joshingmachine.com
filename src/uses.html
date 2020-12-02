@@ -16,8 +16,12 @@ title: Uses - Josh Smith
 		width: 1px;
 	}
 
+	.anchor-link__container > * {
+		display: inline;
+	}
+
 	.anchor-link:focus,
-	dt:hover .anchor-link {
+	.anchor-link__container:hover .anchor-link {
 		height: auto;
 		position: static;
 		width: auto;
@@ -31,104 +35,140 @@ title: Uses - Josh Smith
 		top: auto;
 		width: 1px;
 	}
+
+	dd + dd {
+		margin-top: 1rem;
+	}
 </style>
 
 <h1>Uses</h1>
 
 <p>These are the things I use in my work. If you have any questions, <a href="/contact/">contact me</a>.</p>
 
-<h2>Hardware</h2>
+<section id="hardware">
+	<div class="anchor-link__container">
+		<h2>Hardware</h2>
 
-<dl>
-	<div id="computers">
-		<dt>
-			<span>Computers</span>
-			<a class="anchor-link" href="#computers">
-				<span aria-hidden="true">#</span>
-				<span class="visually-hidden">Link to computers section</span>
-			</a>
-		</dt>
-		<dd>
-			<section>
-				<a href="https://support.apple.com/kb/SP731?locale=en_US">iMac (Retina 5k, 27-inch, Late 2015)</a>
-
-				<dl>
-					<dt>Processor</dt>
-					<dd>3.2 GHz Quad-Core Intel Core i5</dd>
-
-					<dt>Memory</dt>
-					<dd>24 GB 1867 MHz DDR3</dd>
-
-					<dt>Graphics</dt>
-					<dd>AMD Radeon R9 M380 2 GB</dd>
-				</dl>
-			</section>
-		</dd>
-		<dd>
-			<section>
-				<a href="https://www.lenovo.com/us/en/laptops/thinkpad/t-series/t420/">Thinkpad T420</a>
-
-				<dl>
-					<dt>Processor</dt>
-					<dd></dd>
-
-					<dt>Memory</dt>
-					<dd></dd>
-
-					<dt>Graphics</dt>
-					<dd></dd>
-				</dl>
-			</section>
-		</dd>
+		<a class="anchor-link" href="#hardware">
+			<span aria-hidden="true">#</span>
+			<span class="visually-hidden">Link to hardware section</span>
+		</a>
 	</div>
 
-	<div id="monitors">
-		<dt>
-			<span>Monitors</span>
-			<a class="anchor-link" href="#monitors">
-				<span aria-hidden="true">#</span>
-				<span class="visually-hidden">Link to monitors section</span>
-			</a>
-		</dt>
-		<dd>Dell E228WFP 22-inch Widescreen LCD Monitor</dd>
+	<dl>
+		<div id="computers">
+			<dt>
+				<div class="anchor-link__container">
+					<span>Computers</span>
+
+					<a class="anchor-link" href="#computers">
+						<span aria-hidden="true">#</span>
+						<span class="visually-hidden">Link to computers section</span>
+					</a>
+				</div>
+			</dt>
+			<dd>
+				<section>
+					<a href="https://support.apple.com/kb/SP731?locale=en_US">iMac (Retina 5k, 27-inch, Late 2015)</a>
+
+					<dl>
+						<dt>Processor</dt>
+						<dd>3.2 GHz Quad-Core Intel Core i5</dd>
+
+						<dt>Memory</dt>
+						<dd>24 GB 1867 MHz DDR3</dd>
+
+						<dt>Graphics</dt>
+						<dd>AMD Radeon R9 M380 2 GB</dd>
+					</dl>
+				</section>
+			</dd>
+			<dd>
+				<section>
+					<a href="https://www.lenovo.com/us/en/laptops/thinkpad/t-series/t420/">Thinkpad T420</a>
+
+					<dl>
+						<dt>Processor</dt>
+						<dd>Intel Core i5-2520M CPU @ 2.50 GHz x 4</dd>
+
+						<dt>Memory</dt>
+						<dd>3.7 GiB</dd>
+
+						<dt>Graphics</dt>
+						<dd>Intel Sandybridge Mobile</dd>
+					</dl>
+				</section>
+			</dd>
+		</div>
+
+		<div id="monitors">
+			<dt>
+				<div class="anchor-link__container">
+					<span>Monitors</span>
+
+					<a class="anchor-link" href="#monitors">
+						<span aria-hidden="true">#</span>
+						<span class="visually-hidden">Link to monitors section</span>
+					</a>
+				</div>
+			</dt>
+			<dd>iMac Built-in 27-inch Retina Display</dd>
+			<dd>Dell E228WFP 22-inch Widescreen LCD Monitor</dd>
+		</div>
+
+		<div id="keyboard">
+			<dt>
+				<div class="anchor-link__container">
+					<span>Keyboard</span>
+
+					<a class="anchor-link" href="#keyboard">
+						<span aria-hidden="true">#</span>
+						<span class="visually-hidden">Link to keyboard section</span>
+					</a>
+				</div>
+			</dt>
+			<dd><a href="https://www.logitech.com/en-us/products/keyboards/k860-split-ergonomic.920-009166.html">Logitech ERGO K860 Wireless Split Keyboard</a></dd>
+		</div>
+
+		<div id="mouse">
+			<dt>
+				<div class="anchor-link__container">
+					<span>Mouse</span>
+
+					<a class="anchor-link" href="#mouse">
+						<span aria-hidden="true">#</span>
+						<span class="visually-hidden">Link to mouse section</span>
+					</a>
+				</div>
+			</dt>
+			<dd><a href="https://www.anker.com/products/variant/anker-24g-wireless-vertical-ergonomic-optical-mouse/A7852011">Anker 2.4G Wireless Vertical Ergonomic Optical Mouse</a></dd>
+		</div>
+
+		<div id="headphones">
+			<dt>
+				<div class="anchor-link__container">
+					<span>Headphones</span>
+
+					<a class="anchor-link" href="#headphones">
+						<span aria-hidden="true">#</span>
+						<span class="visually-hidden">Link to headphones section</span>
+					</a>
+				</div>
+			</dt>
+			<dd><a href="https://en-us.sennheiser.com/hd-280-pro">Sennheiser HD 280 Pro</a></dd>
+		</div>
+	</dl>
+</section>
+
+<section id="software">
+	<div class="anchor-link__container">
+		<h2>Software</h2>
+
+		<a class="anchor-link" href="#software">
+			<span aria-hidden="true">#</span>
+			<span class="visually-hidden">Link to software section</span>
+		</a>
 	</div>
 
-	<div id="keyboard">
-		<dt>
-			<span>Keyboard</span>
-			<a class="anchor-link" href="#keyboard">
-				<span aria-hidden="true">#</span>
-				<span class="visually-hidden">Link to keyboard section</span>
-			</a>
-		</dt>
-		<dd><a href="https://www.logitech.com/en-us/products/keyboards/k860-split-ergonomic.920-009166.html">Logitech ERGO K860 Wireless Split Keyboard</a></dd>
-	</div>
-
-	<div id="mouse">
-		<dt>
-			<span>Mouse</span>
-			<a class="anchor-link" href="#mouse">
-				<span aria-hidden="true">#</span>
-				<span class="visually-hidden">Link to mouse section</span>
-			</a>
-		</dt>
-		<dd><a href="https://www.anker.com/products/variant/anker-ergonomic-optical-usb-wired-vertical-mouse/A7851011">Anker Ergonomic Optical USB Wired Vertical Mouse</a></dd>
-	</div>
-
-	<div id="headphones">
-		<dt>
-			<span>Headphones</span>
-			<a class="anchor-link" href="#headphones">
-				<span aria-hidden="true">#</span>
-				<span class="visually-hidden">Link to headphones section</span>
-			</a>
-		</dt>
-		<dd><a href="https://en-us.sennheiser.com/hd-280-pro">Sennheiser HD 280 Pro</a></dd>
-	</div>
-</dl>
-
-<hr>
-
-<h2>Software</h2>
-
-<p>I try to keep my <a href="https://github.com/joshingmachine/dotfiles">dotfiles</a> updated with the applications I use.</p>
+	<p>I try to keep my <a href="https://github.com/joshingmachine/dotfiles">dotfiles</a> updated with the desktop software I use. My <a href="/accounts">Accounts</a> page gives a sense of some web-based services I use.</p>
+</section>

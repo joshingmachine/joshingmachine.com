@@ -7,15 +7,6 @@ title: Uses - Josh Smith
 		background-color: #fffe7a;
 	}
 
-	.anchor-link {
-		height: 1px;
-		left: -10000px;
-		overflow: hidden;
-		position: absolute;
-		top: auto;
-		width: 1px;
-	}
-
 	.anchor-link__container > * {
 		display: inline;
 	}
@@ -36,14 +27,25 @@ title: Uses - Josh Smith
 		width: 1px;
 	}
 
-	dd + dd {
-		margin-top: 1rem;
+	@media (hover: hover) {
+		.anchor-link {
+			height: 1px;
+			left: -10000px;
+			overflow: hidden;
+			position: absolute;
+			top: auto;
+			width: 1px;
+		}
 	}
 </style>
 
 <h1>Uses</h1>
 
-<p>These are the things I use in my work. If you have any questions, <a href="/contact/">contact me</a>.</p>
+<p>There is <a href="https://uses.tech/">a trend</a> of developers creating a <code>/uses</code> page on their personal sites because people message them all the time asking them what they use.</p>
+
+<p>No one asks me.</p>
+
+<p><em>But</em>, I'm susceptible to trends. Therefore, these are the things I use in my work. If you have any questions, <a href="/contact/">contact me</a>.</p>
 
 <section id="hardware">
 	<div class="anchor-link__container">
@@ -51,113 +53,113 @@ title: Uses - Josh Smith
 
 		<a class="anchor-link" href="#hardware">
 			<span aria-hidden="true">#</span>
-			<span class="visually-hidden">Link to hardware section</span>
+			<span class="visually-hidden">Link to "hardware" section</span>
 		</a>
 	</div>
 
-	<dl>
-		<div id="computers">
-			<dt>
-				<div class="anchor-link__container">
-					<span>Computers</span>
+	<section id="computers">
+		<div class="anchor-link__container">
+			<h3>Computers</h3>
 
-					<a class="anchor-link" href="#computers">
-						<span aria-hidden="true">#</span>
-						<span class="visually-hidden">Link to computers section</span>
-					</a>
-				</div>
-			</dt>
-			<dd>
-				<section>
-					<a href="https://support.apple.com/kb/SP731?locale=en_US">iMac (Retina 5k, 27-inch, Late 2015)</a>
-
-					<dl>
-						<dt>Processor</dt>
-						<dd>3.2 GHz Quad-Core Intel Core i5</dd>
-
-						<dt>Memory</dt>
-						<dd>24 GB 1867 MHz DDR3</dd>
-
-						<dt>Graphics</dt>
-						<dd>AMD Radeon R9 M380 2 GB</dd>
-					</dl>
-				</section>
-			</dd>
-			<dd>
-				<section>
-					<a href="https://www.lenovo.com/us/en/laptops/thinkpad/t-series/t420/">Thinkpad T420</a>
-
-					<dl>
-						<dt>Processor</dt>
-						<dd>Intel Core i5-2520M CPU @ 2.50 GHz x 4</dd>
-
-						<dt>Memory</dt>
-						<dd>3.7 GiB</dd>
-
-						<dt>Graphics</dt>
-						<dd>Intel Sandybridge Mobile</dd>
-					</dl>
-				</section>
-			</dd>
+			<a class="anchor-link" href="#computers">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "computers" section</span>
+			</a>
 		</div>
 
-		<div id="monitors">
-			<dt>
-				<div class="anchor-link__container">
-					<span>Monitors</span>
+		<section>
+			<h4><a href="https://support.apple.com/kb/SP731?locale=en_US">iMac (Retina 5k, 27-inch, Late 2015)</a></h4>
 
-					<a class="anchor-link" href="#monitors">
-						<span aria-hidden="true">#</span>
-						<span class="visually-hidden">Link to monitors section</span>
-					</a>
-				</div>
-			</dt>
-			<dd>iMac Built-in 27-inch Retina Display</dd>
-			<dd>Dell E228WFP 22-inch Widescreen LCD Monitor</dd>
+			<dl>
+				<dt>Processor</dt>
+				<dd>3.2 GHz Quad-Core Intel Core i5</dd>
+
+				<dt>Memory</dt>
+				<dd>24 GB 1867 MHz DDR3</dd>
+
+				<dt>Graphics</dt>
+				<dd>AMD Radeon R9 M380 2 GB</dd>
+			</dl>
+		</section>
+
+		<section>
+			<h4><a href="https://www.lenovo.com/us/en/laptops/thinkpad/t-series/t420/">Thinkpad T420</a></h4>
+
+			<dl>
+				<dt>Processor</dt>
+				<dd>Intel Core i5-2520M CPU @ 2.50 GHz x 4</dd>
+
+				<dt>Memory</dt>
+				<dd>3.7 GiB</dd>
+
+				<dt>Graphics</dt>
+				<dd>Intel Sandybridge Mobile</dd>
+			</dl>
+		</section>
+	</section>
+
+	<section id="monitors">
+		<div class="anchor-link__container">
+			<h3>Monitors</h3>
+
+			<a class="anchor-link" href="#monitors">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "monitors" section</span>
+			</a>
 		</div>
 
-		<div id="keyboard">
-			<dt>
-				<div class="anchor-link__container">
-					<span>Keyboard</span>
+		<ul>
+			<li>iMac Built-in 27-inch Retina Display</li>
+			<li>Dell E228WFP 22-inch Widescreen LCD Monitor</li>
+		</ul>
 
-					<a class="anchor-link" href="#keyboard">
-						<span aria-hidden="true">#</span>
-						<span class="visually-hidden">Link to keyboard section</span>
-					</a>
-				</div>
-			</dt>
-			<dd><a href="https://www.logitech.com/en-us/products/keyboards/k860-split-ergonomic.920-009166.html">Logitech ERGO K860 Wireless Split Keyboard</a></dd>
+		<p>Mostly just using what was provided to me by my work, perfectly fine for my needs.</p>
+	</section>
+
+	<section id="keyboard">
+		<div class="anchor-link__container">
+			<h3>Keyboard</h3>
+
+			<a class="anchor-link" href="#keyboard">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "keyboard" section</span>
+			</a>
 		</div>
 
-		<div id="mouse">
-			<dt>
-				<div class="anchor-link__container">
-					<span>Mouse</span>
+		<a href="https://www.logitech.com/en-us/products/keyboards/k860-split-ergonomic.920-009166.html">Logitech ERGO K860 Wireless Split Keyboard</a>
 
-					<a class="anchor-link" href="#mouse">
-						<span aria-hidden="true">#</span>
-						<span class="visually-hidden">Link to mouse section</span>
-					</a>
-				</div>
-			</dt>
-			<dd><a href="https://www.anker.com/products/variant/anker-24g-wireless-vertical-ergonomic-optical-mouse/A7852011">Anker 2.4G Wireless Vertical Ergonomic Optical Mouse</a></dd>
+		<p>I had been using the <a href="https://www.apple.com/shop/product/MLA22LL/A/magic-keyboard-us-english">Apple Magic Keyboard</a> because it came with my work iMac, but my wrist started hurting and I decided to look into ergonomic keyboards. The K860 has been great, the pain disappeared almost immediately after switching to it.</p>
+	</section>
+
+	<section id="mouse">
+		<div class="anchor-link__container">
+			<h3>Mouse</h3>
+
+			<a class="anchor-link" href="#mouse">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "mouse" section</span>
+			</a>
 		</div>
 
-		<div id="headphones">
-			<dt>
-				<div class="anchor-link__container">
-					<span>Headphones</span>
+		<a href="https://www.anker.com/products/variant/anker-24g-wireless-vertical-ergonomic-optical-mouse/A7852011">Anker 2.4G Wireless Vertical Ergonomic Optical Mouse</a>
 
-					<a class="anchor-link" href="#headphones">
-						<span aria-hidden="true">#</span>
-						<span class="visually-hidden">Link to headphones section</span>
-					</a>
-				</div>
-			</dt>
-			<dd><a href="https://en-us.sennheiser.com/hd-280-pro">Sennheiser HD 280 Pro</a></dd>
+		<p>I happily used <a href="https://www.anker.com/products/variant/anker-ergonomic-optical-usb-wired-vertical-mouse/A7851011">the wired version</a> of this mouse for 5.5 years, but switched to the wireless version to reduce desk clutter.</p>
+	</section>
+
+	<section id="headphones">
+		<div class="anchor-link__container">
+			<h3>Headphones</h3>
+
+			<a class="anchor-link" href="#headphones">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "headphones" section</span>
+			</a>
 		</div>
-	</dl>
+
+		<a href="https://en-us.sennheiser.com/hd-280-pro">Sennheiser HD 280 Pro</a>
+
+		<p>I bought these in 2015 and have used them since. They're great. I am looking to find a headset similar to this that has a built-in microphone and is monoaural, but I haven't found one that I like yet.</p>
+	</section>
 </section>
 
 <section id="software">
@@ -166,9 +168,95 @@ title: Uses - Josh Smith
 
 		<a class="anchor-link" href="#software">
 			<span aria-hidden="true">#</span>
-			<span class="visually-hidden">Link to software section</span>
+			<span class="visually-hidden">Link to "software" section</span>
 		</a>
 	</div>
 
 	<p>I try to keep my <a href="https://github.com/joshingmachine/dotfiles">dotfiles</a> updated with the desktop software I use. My <a href="/accounts">Accounts</a> page gives a sense of some web-based services I use.</p>
+
+	<section id="operating-systems">
+		<div class="anchor-link__container">
+			<h3>Operating Systems</h3>
+
+			<a class="anchor-link" href="#operating-systems">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "operating systems" section</span>
+			</a>
+		</div>
+
+		<ul>
+			<li>macOS 10.15 Catalina</li>
+			<li>Ubuntu 18.04 LTS Bionic Beaver</li>
+		</ul>
+	</section>
+
+	<section id="browsers">
+		<div class="anchor-link__container">
+			<h3>Browsers</h3>
+
+			<a class="anchor-link" href="#browsers">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "browsers" section</span>
+			</a>
+		</div>
+
+		<p>I've used Chrome, Safari, Opera, etc., and am comfortable with them, but <strong>my preferred browser is Firefox</strong>. Chrome is a little too memory intensive for my Thinkpad, and thus I made the switch to Firefox. I've really enjoyed using it as my primary. Also, I get the feel-goods by <a href="https://css-tricks.com/the-ecological-impact-of-browser-diversity/">supporting browser diversity</a>.</p>
+	</section>
+
+	<section id="browser-extensions">
+		<div class="anchor-link__container">
+			<h3>Browser Extensions</h3>
+
+			<a class="anchor-link" href="#browser-extensions">
+				<span aria-hidden="true">#</span>
+				<span class="visually-hidden">Link to "browser extensions" section</span>
+			</a>
+		</div>
+
+		<ul>
+			<li>
+				<a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">axe - Web Accessibility Testing</a>
+			</li>
+			<li>
+				<a href="https://github.com/mozilla/multi-account-containers">Firefox Multi-Account Containers</a>
+
+				<p>This is one of those "how did I ever live without it" extensions.</p>
+			</li>
+			<li>
+				<a href="https://lastpass.com">LastPass</a>
+
+			</li>
+			<li>
+				<a href="https://github.com/GoogleChrome/lighthouse">Google Lighthouse</a>
+
+			</li>
+			<li>
+				<a href="https://github.com/facebook/react/tree/master/packages/react-devtools">React Developer Tools</a>
+			</li>
+			<li>
+				<a href="https://tab.gladly.io/">Tab for a Cause</a>
+
+				<p>I open a lot of tabs.</p>
+			</li>
+			<li>
+				<a href="https://www.tampermonkey.net/">TamperMonkey</a>
+
+			</li>
+		</ul>
+	</section>
+</section>
+
+<section id="miscellaneous">
+	<div class="anchor-link__container">
+		<h2>Miscellaneous</h2>
+
+		<a class="anchor-link" href="#miscellaneous">
+			<span aria-hidden="true">#</span>
+			<span class="visually-hidden">Link to "miscellaneous" section</span>
+		</a>
+	</div>
+
+	<a href="https://www.omoton.com/collections/l2-phone-stand/products/cellphone-stand-c2?variant=37677153616070">Omoton Cellphone Stand C2</a>
+
+	<p>A cellphone stand seems frivolous, but I like it.</p>
 </section>

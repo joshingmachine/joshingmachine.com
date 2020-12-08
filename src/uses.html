@@ -1,40 +1,9 @@
 ---
+ageRating: 'General'
+description: 'The things I use in my work.'
 layout: base.html
 title: Uses - Josh Smith
 ---
-<style>
-	.anchor-link__container > * {
-		display: inline;
-	}
-
-	.anchor-link:focus,
-	.anchor-link__container:hover .anchor-link {
-		height: auto;
-		position: static;
-		width: auto;
-	}
-
-	.visually-hidden {
-		height: 1px;
-		left: -10000px;
-		overflow: hidden;
-		position: absolute;
-		top: auto;
-		width: 1px;
-	}
-
-	@media (hover: hover) {
-		.anchor-link {
-			height: 1px;
-			left: -10000px;
-			overflow: hidden;
-			position: absolute;
-			top: auto;
-			width: 1px;
-		}
-	}
-</style>
-
 <h1>Uses</h1>
 
 <p>There is <a href="https://uses.tech/">a trend</a> of developers creating a <code>/uses</code> page on their personal sites because people message them all the time asking them what they use.</p>
@@ -44,24 +13,24 @@ title: Uses - Josh Smith
 <p><em>But</em>, I'm susceptible to trends. Therefore, these are the things I use in my work. If you have any questions, <a href="/contact/">contact me</a>.</p>
 
 <section id="hardware">
-	<div class="anchor-link__container">
+	<header>
 		<h2>Hardware</h2>
 
 		<a class="anchor-link" href="#hardware">
 			<span aria-hidden="true">#</span>
 			<span class="visually-hidden">Link to "hardware" section</span>
 		</a>
-	</div>
+	</header>
 
 	<section id="computers">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Computers</h3>
 
 			<a class="anchor-link" href="#computers">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "computers" section</span>
 			</a>
-		</div>
+		</header>
 
 		<section>
 			<h4><a href="https://support.apple.com/kb/SP731?locale=en_US">iMac (Retina 5k, 27-inch, Late 2015)</a></h4>
@@ -95,14 +64,14 @@ title: Uses - Josh Smith
 	</section>
 
 	<section id="monitors">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Monitors</h3>
 
 			<a class="anchor-link" href="#monitors">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "monitors" section</span>
 			</a>
-		</div>
+		</header>
 
 		<ul>
 			<li>iMac Built-in 27-inch Retina Display</li>
@@ -113,14 +82,14 @@ title: Uses - Josh Smith
 	</section>
 
 	<section id="keyboard">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Keyboard</h3>
 
 			<a class="anchor-link" href="#keyboard">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "keyboard" section</span>
 			</a>
-		</div>
+		</header>
 
 		<a href="https://www.logitech.com/en-us/products/keyboards/k860-split-ergonomic.920-009166.html">Logitech ERGO K860 Wireless Split Keyboard</a>
 
@@ -128,14 +97,14 @@ title: Uses - Josh Smith
 	</section>
 
 	<section id="mouse">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Mouse</h3>
 
 			<a class="anchor-link" href="#mouse">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "mouse" section</span>
 			</a>
-		</div>
+		</header>
 
 		<a href="https://www.anker.com/products/variant/anker-24g-wireless-vertical-ergonomic-optical-mouse/A7852011">Anker 2.4G Wireless Vertical Ergonomic Optical Mouse</a>
 
@@ -143,14 +112,14 @@ title: Uses - Josh Smith
 	</section>
 
 	<section id="headphones">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Headphones</h3>
 
 			<a class="anchor-link" href="#headphones">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "headphones" section</span>
 			</a>
-		</div>
+		</header>
 
 		<a href="https://en-us.sennheiser.com/hd-280-pro">Sennheiser HD 280 Pro</a>
 
@@ -159,26 +128,26 @@ title: Uses - Josh Smith
 </section>
 
 <section id="software">
-	<div class="anchor-link__container">
+	<header>
 		<h2>Software</h2>
 
 		<a class="anchor-link" href="#software">
 			<span aria-hidden="true">#</span>
 			<span class="visually-hidden">Link to "software" section</span>
 		</a>
-	</div>
+	</header>
 
 	<p>I try to keep my <a href="https://github.com/joshingmachine/dotfiles">dotfiles</a> updated with the desktop software I use. My <a href="/accounts">Accounts</a> page gives a sense of some web-based services I use.</p>
 
 	<section id="operating-systems">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Operating Systems</h3>
 
 			<a class="anchor-link" href="#operating-systems">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "operating systems" section</span>
 			</a>
-		</div>
+		</header>
 
 		<ul>
 			<li>macOS 10.15 Catalina</li>
@@ -187,27 +156,27 @@ title: Uses - Josh Smith
 	</section>
 
 	<section id="browsers">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Browsers</h3>
 
 			<a class="anchor-link" href="#browsers">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "browsers" section</span>
 			</a>
-		</div>
+		</header>
 
 		<p>I've used Chrome, Safari, Opera, etc., and am comfortable with them, but <strong>my preferred browser is Firefox</strong>. Chrome is a little too memory intensive for my Thinkpad, and thus I made the switch to Firefox. I've really enjoyed using it as my primary. Also, I get the feel-goods by <a href="https://css-tricks.com/the-ecological-impact-of-browser-diversity/">supporting browser diversity</a>.</p>
 	</section>
 
 	<section id="browser-extensions">
-		<div class="anchor-link__container">
+		<header>
 			<h3>Browser Extensions</h3>
 
 			<a class="anchor-link" href="#browser-extensions">
 				<span aria-hidden="true">#</span>
 				<span class="visually-hidden">Link to "browser extensions" section</span>
 			</a>
-		</div>
+		</header>
 
 		<ul>
 			<li>
@@ -243,14 +212,14 @@ title: Uses - Josh Smith
 </section>
 
 <section id="miscellaneous">
-	<div class="anchor-link__container">
+	<header>
 		<h2>Miscellaneous</h2>
 
 		<a class="anchor-link" href="#miscellaneous">
 			<span aria-hidden="true">#</span>
 			<span class="visually-hidden">Link to "miscellaneous" section</span>
 		</a>
-	</div>
+	</header>
 
 	<a href="https://www.omoton.com/collections/l2-phone-stand/products/cellphone-stand-c2?variant=37677153616070">Omoton Cellphone Stand C2</a>
 

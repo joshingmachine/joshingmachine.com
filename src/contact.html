@@ -1,9 +1,72 @@
 ---
 layout: base.html
-title: Contact - Josh Smith
+title: Contact Josh Smith
 ---
+<style>
+	button,
+	label {
+		display: block;
+		font-family: 'Lato', 'Arial', sans-serif;
+		font-size: inherit;
+		user-select: none;
+	}
+
+	input {
+		font-family: inherit;
+		font-size: inherit;
+		width: 100%;
+	}
+
+	textarea {
+		font-family: inherit;
+		font-size: inherit;
+		resize: vertical;
+		width: 100%;
+	}
+</style>
+
 <h1>Contact</h1>
 
-<p>The best way to reach me is via email. My email address is <b title="josh">the first four letters of my first name</b>, <b title="@">the "at" sign</b>, and then <b title="joshingmachine.com">the domain of this website</b> (everything after <code>https://www.</code>).</p>
+<p>The best way to reach me is via email. My email address is <var title="josh">the first four letters of my first name</var> + <var>@joshingmachine.com</var>.</p>
 
 <p>In addition to email, you can try to reach me via one of my <a href="/accounts/">accounts</a>.</p>
+
+<p>Finally, you can send me a message using the form below:</p>
+
+<form
+	data-netlify="true"
+	name="contact"
+	method="post"
+>
+	<div>
+		<label for="name">Your Name</label>
+		<input
+			id="name"
+			name="name"
+			required
+			type="text"
+		/>
+	</div>
+
+	<div>
+		<label for="email">Your Email</label>
+		<input
+			id="email"
+			name="email"
+			required
+			type="email"
+		/>
+	</div>
+
+	<div>
+		<label for="message">Message</label>
+		<textarea
+			id="message"
+			minlength="2"
+			name="message"
+			required
+		></textarea>
+	</div>
+
+	<button type="submit">Send Message to Josh</button>
+</form>

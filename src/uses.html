@@ -4,6 +4,13 @@ description: 'The things I use in my work.'
 layout: base.html
 title: Josh Smith's /uses
 ---
+<style>
+	.browser-extensions {
+		list-style: none;
+		padding: 0;
+	}
+</style>
+
 <h1>Uses</h1>
 
 <p>There is <a href="https://uses.tech/">a trend</a> of developers creating a <code>/uses</code> page on their personal sites because people message them all the time asking them what they use.</p>
@@ -165,7 +172,10 @@ title: Josh Smith's /uses
 			</a>
 		</header>
 
-		<p>I've used Chrome, Safari, Opera, etc., and am comfortable with them, but <strong>my preferred browser is Firefox</strong>. Chrome is a little too memory intensive for my Thinkpad, and thus I made the switch to Firefox. I've really enjoyed using it as my primary. Also, I get the feel-goods by <a href="https://css-tricks.com/the-ecological-impact-of-browser-diversity/">supporting browser diversity</a>.</p>
+
+		<a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>
+
+		<p>I've used Chrome, Safari, Opera, etc., and am comfortable with them, but Firefox is my jam. Chrome is a little too memory intensive for my Thinkpad, and thus I made the switch to Firefox. Also, I get the feel-goods by <a href="https://css-tricks.com/the-ecological-impact-of-browser-diversity/">supporting browser diversity</a>. I've really enjoyed using it as my primary browser, and just started using <a href="https://www.mozilla.org/en-US/firefox/focus/">Firefox Focus</a> as my default browser on iOS, so we'll see how that goes.</p>
 	</section>
 
 	<section id="browser-extensions">
@@ -178,9 +188,11 @@ title: Josh Smith's /uses
 			</a>
 		</header>
 
-		<ul>
+		<ul class="browser-extensions">
 			<li>
 				<a href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">axe - Web Accessibility Testing</a>
+
+				<p>Gotta know if you're viewing (and especially building) inaccessible stuff.</p>
 			</li>
 			<li>
 				<a href="https://github.com/mozilla/multi-account-containers">Firefox Multi-Account Containers</a>
@@ -190,22 +202,27 @@ title: Josh Smith's /uses
 			<li>
 				<a href="https://lastpass.com">LastPass</a>
 
+				<p>It's the 21st century, everyone should use a <a href="https://en.wikipedia.org/wiki/Password_manager">password manager</a>.</p>
 			</li>
 			<li>
 				<a href="https://github.com/GoogleChrome/lighthouse">Google Lighthouse</a>
 
+				<p>More insight regarding the quality of the web things I build.</p>
 			</li>
 			<li>
 				<a href="https://github.com/facebook/react/tree/master/packages/react-devtools">React Developer Tools</a>
+
+				<p>I often make things with <a href="https://reactjs.org/">React</a>. You could say I <em>develop</em> things. With <em>tools</em>.
 			</li>
 			<li>
 				<a href="https://tab.gladly.io/">Tab for a Cause</a>
 
-				<p>I open a lot of tabs.</p>
+				<p>I open a lot of tabs, someone might as well benefit from it.</p>
 			</li>
 			<li>
 				<a href="https://www.tampermonkey.net/">TamperMonkey</a>
 
+				<p>Userscripts are cool, especially great for repeat processes or for custom styles when a site decides that light gray text on super light gray background is okay.</p>
 			</li>
 		</ul>
 	</section>

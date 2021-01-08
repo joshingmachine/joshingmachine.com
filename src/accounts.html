@@ -2,6 +2,18 @@
 layout: base.html
 title: Josh Smith's Accounts
 ---
+<style>
+	#account-nav {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	#account-nav > * {
+		width: 44px;
+	}
+</style>
+
 <h1>Accounts</h1>
 
 <p>These are parts of the <span aria-label="web" role="img" title="web">🕸️</span> that I <span aria-label="surf" role="img" title="surf">🏄</span>.
@@ -159,6 +171,7 @@ title: Josh Smith's Accounts
 
 	<template id="y"></template>
 	<li><a href="https://www.yelp.com/user_details?userid=_WmSBz0wvrOXpwlIXC1KKA">Yelp</a></li>
+	<li><a href="https://www.youtube.com/channel/UCtaFvyu_i4va-UltcqdIS8g">YouTube</a></li>
 
 	<template id="z"></template>
 </ul>
@@ -166,6 +179,8 @@ title: Josh Smith's Accounts
 <script>
 	const accountNav = document.getElementById('account-nav')
 	const accountNavLinks = Array.from(accountNav.getElementsByTagName('a'))
+	const targetColor = getComputedStyle(document.documentElement)
+							.getPropertyValue('--target-color')
 
 	const clearHighlights = () => {
 		const accountList = document.getElementById('account-list')
@@ -179,7 +194,7 @@ title: Josh Smith's Accounts
 			return
 		}
 
-		element.style = 'background-color: #fffe92; list-style-type: circle;'
+		element.style = `background-color: ${targetColor}; list-style-type: circle;`
 		highlightElement(element.nextElementSibling)
 	}
 

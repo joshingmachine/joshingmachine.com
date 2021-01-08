@@ -12,11 +12,24 @@ themeColor: '#00000'
         <meta name="theme-color" content="{{ themeColor }}" />
         <meta name="description" content="{{ description }}" />
         <meta name="rating" content="{{ ageRating }}" />
-        <link rel="canonical" href="{{ 'https://www.joshingmachine.com' | append: page.url }}">
+
+        <link rel="canonical" href="{{ site.url | append: page.url }}" />
+
+		<!-- Preload fonts -->
+		<link rel="preload" as="font" href="/fonts/libre-baskerville/libre-baskerville-v9-latin-regular.woff2" type="font/woff2" />
+		<link rel="preload" as="font" href="/fonts/libre-baskerville/libre-baskerville-v9-latin-regular.woff" type="font/woff" />
+		<link rel="preload" as="font" href="/fonts/libre-baskerville/libre-baskerville-v9-latin-700.woff2" type="font/woff2" />
+		<link rel="preload" as="font" href="/fonts/libre-baskerville/libre-baskerville-v9-latin-700.woff" type="font/woff" />
+		<link rel="preload" as="font" href="/fonts/libre-baskerville/libre-baskerville-v9-latin-italic.woff2" type="font/woff2" />
+		<link rel="preload" as="font" href="/fonts/libre-baskerville/libre-baskerville-v9-latin-italic.woff" type="font/woff" />
+		<link rel="preload" as="font" href="/fonts/lato/lato-v17-latin-700.woff2" type="font/woff2" />
+		<link rel="preload" as="font" href="/fonts/lato/lato-v17-latin-700.woff" type="font/woff" />
+		<link rel="preload" as="font" href="/fonts/lato/lato-v17-latin-700italic.woff2" type="font/woff2" />
+		<link rel="preload" as="font" href="/fonts/lato/lato-v17-latin-700italic.woff" type="font/woff" />
 
         <!-- Facebook -->
         <!-- <meta property="fb:app_id" content="123456789"> -->
-        <meta property="og:url" content="{{ 'https://www.joshingmachine.com' | append: page.url }}">
+        <meta property="og:url" content="{{ site.url | append: page.url }}">
         <meta property="og:type" content="website">
         <meta property="og:title" content="{{ title }}">
         {% if imagePath and imageAltText %}
@@ -82,8 +95,8 @@ themeColor: '#00000'
 				src: url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.eot'); /* IE9 Compat Modes */
 				src: local(''),
 				url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-				url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-				url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.woff') format('woff'), /* Modern Browsers */
+				url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.woff2') format('woff2'), /* super modern browsers */
+				url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.woff') format('woff'), /* modern browsers */
 				url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
 				url('../fonts/libre-baskerville/libre-baskerville-v9-latin-700.svg#LibreBaskerville') format('svg'); /* Legacy iOS */
 				font-display: optional;

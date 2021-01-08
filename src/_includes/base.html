@@ -149,11 +149,14 @@ themeColor: '#00000'
 
 			:root {
 				--background-color: #fafaf5;
+				--foreground-color: #1c1c1c;
+				--link-color: rgb(0, 0, 238);
 				--target-color: #fffe92;
 			}
 
-			:target {
-				background-color: var(--target-color);
+			:target,
+			:target * {
+				background-color: var(--target-color) !important;
 			}
 
 			* {
@@ -162,6 +165,7 @@ themeColor: '#00000'
 
 			html {
 				background-color: var(--background-color);
+				color: var(--foreground-color);
 				font-family: 'Libre Baskerville', 'Georgia', serif;
 				font-size: 20px;
 				font-size: clamp(18px, calc(14px + 1vw), 22px);
@@ -182,9 +186,14 @@ themeColor: '#00000'
 				font-family: 'Lato', 'Arial', sans-serif;
 			}
 
+			a {
+				background-color: var(--background-color);
+				color: var(--link-color);
+			}
+
 			a:focus {
-				background-color: rgb(0, 0, 238);
-				color: white;
+				background-color: var(--link-color);
+				color: var(--background-color);
 			}
 
 			body {
@@ -247,6 +256,15 @@ themeColor: '#00000'
 			@media (prefers-reduced-motion) {
 				html {
 					scroll-behavior: auto;
+				}
+			}
+
+			@media (prefers-color-scheme: dark) {
+				:root {
+					--background-color: #1c1c1c;
+					--foreground-color: #fafaf5;
+					--link-color: yellow;
+					--target-color: #31301c;
 				}
 			}
 		</style>

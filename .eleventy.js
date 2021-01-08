@@ -1,11 +1,12 @@
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy('src/keybase.txt')
-    eleventyConfig.addPassthroughCopy('src/fonts')
+	eleventyConfig.addPassthroughCopy('src/keybase.txt')
+	eleventyConfig.addPassthroughCopy('src/robots.txt')
+	eleventyConfig.addPassthroughCopy('src/fonts')
 
-    return {
-        dir: {
-            input: 'src',
-            output: 'dist',
-        },
-    }
+	return {
+		dir: {
+			input: 'src',
+			output: 'dist',
+		},
+	}
 }

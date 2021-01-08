@@ -134,8 +134,12 @@ themeColor: '#00000'
 				font-display: optional;
 			}
 
+			:root {
+				--target-color: #fffe92;
+			}
+
 			:target {
-				background-color: #fffe92;
+				background-color: var(--target-color);
 			}
 
 			* {
@@ -163,34 +167,64 @@ themeColor: '#00000'
 				font-family: 'Lato', 'Arial', sans-serif;
 			}
 
+			a:focus {
+				background-color: rgb(0, 0, 238);
+				color: white;
+			}
+
+			body {
+				margin-left: 1em;
+				margin-right: 1em;
+			}
+
+			header {
+				margin-left: -1em;
+				padding-left: 1em;
+				position: relative;
+			}
+
 			main {
 				margin: 0 auto;
 				max-width: 35em;
 			}
 
 			.visually-hidden {
-				height: 1px;
-				left: -10000px;
-				overflow: hidden;
-				position: absolute;
-				top: auto;
-				width: 1px;
+				border-width: 0 !important;
+				clip: rect(1px,1px,1px,1px) !important;
+				height: 1px !important;
+				overflow: hidden !important;
+				padding: 0 !important;
+				position: absolute !important;
+				white-space: nowrap !important;
+				width: 1px !important;
+			}
+
+			.anchor-link {
+				text-decoration: none;
 			}
 
 			.anchor-link:focus,
 			header:hover > .anchor-link {
-				1eight: auto;
-				position: static;
+				clip: auto;
+				height: auto;
 				width: auto;
+				right: calc(100% - 0.8em);
+			}
+
+			.site-header {
+				margin-bottom: 1em;
+				margin-bottom: clamp(0em, calc(2em - 3vw), 1em);
 			}
 
 			@media (hover: hover) {
 				.anchor-link {
+					border-width: 0 !important;
+					clip: rect(1px,1px,1px,1px);
 					height: 1px;
-					left: -10000px;
-					overflow: hidden;
+					overflow: hidden !important;
+					padding: 0 !important;
 					position: absolute;
-					top: auto;
+					white-space: nowrap !important;
 					width: 1px;
 				}
 			}

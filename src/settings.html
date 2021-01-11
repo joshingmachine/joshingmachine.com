@@ -1,0 +1,78 @@
+---
+ageRating: 'General'
+description: 'Some settings for this website'
+layout: base.html
+title: Settings for joshingmachine.com
+---
+<style>
+	fieldset + fieldset {
+		margin-top: 1em;
+	}
+
+	label {
+		user-select: none;
+	}
+</style>
+
+<header>
+	<h1>Settings</h1>
+</header>
+
+<fieldset>
+	<legend><h2>Theme</h2></legend>
+
+	<div id="theme-destination">
+		<noscript>
+			<p>You currently have JavaScript disabled. Typically that's totally fine by me, but unfortunately it's needed in order to make the functionality on this page work. You can follow <a href="https://enable-javascript.com/">these instructions</a> in order to enable JavaScript.</p>
+		</noscript>
+
+		<noscript>
+			<p>You
+		</noscript>
+	</div>
+
+	<template id="theme-source">
+		<label>
+			<input name="theme" type="radio" value="dark" />
+			<span>Dark</span>
+		</label>
+
+		<label>
+			<input name="theme" type="radio" value="light" />
+			<span>Light</span>
+		</label>
+	</template>
+
+	<script>
+		function setTheme(theme) {
+			localStorage.setItem('theme', theme)
+			document.documentElement.dataset.theme = theme
+		}
+
+		function onThemeClick(e) {
+			setTheme(e.target.value)
+		}
+
+		function addEventListenersToThemeInputs(themeDestination) {
+			const currentTheme = getTheme()
+			const themeInputs = Array.from(themeDestination.getElementsByTagName('INPUT'))
+
+			themeInputs.forEach((input) => {
+				if (input.value === currentTheme) {
+					input.checked = true;
+				}
+
+				input.addEventListener('click', onThemeClick)
+			})
+		}
+
+		function initializeThemeSettings() {
+			const themeDestination = document.getElementById('theme-destination')
+			const themeSource = document.getElementById('theme-source').content.cloneNode(true)
+			themeDestination.appendChild(themeSource)
+			addEventListenersToThemeInputs(themeDestination)
+		}
+
+		initializeThemeSettings()
+	</script>
+</fieldset>

@@ -4,7 +4,7 @@ description: "Josh Smith's personal website."
 themeColor: '#00000'
 ---
 <!DOCTYPE html>
-<html lang="en-US">
+<html data-theme="" lang="en-US">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -147,16 +147,33 @@ themeColor: '#00000'
 				font-display: optional;
 			}
 
-			:root {
+			:root[data-theme=""],
+			[data-theme="light"] {
 				--background-color: #fafaf5;
 				--foreground-color: #1c1c1c;
-				--link-color: rgb(0, 0, 238);
+				--link-color: #0000ee;
 				--target-color: #fffe92;
+			}
+
+			[data-theme="dark"] {
+				--background-color: #1c1c1c;
+				--foreground-color: #fafaf5;
+				--link-color: #cece00;
+				--target-color: #2a2a00;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				:root[data-theme=""] {
+					--background-color: #1c1c1c;
+					--foreground-color: #fafaf5;
+					--link-color: #cece00;
+					--target-color: #2a2a00;
+				}
 			}
 
 			:target,
 			:target * {
-				background-color: var(--target-color) !important;
+				background-color: var(--target-color);
 			}
 
 			* {
@@ -187,7 +204,6 @@ themeColor: '#00000'
 			}
 
 			a {
-				background-color: var(--background-color);
 				color: var(--link-color);
 			}
 
@@ -199,12 +215,6 @@ themeColor: '#00000'
 			body {
 				margin-left: 1em;
 				margin-right: 1em;
-			}
-
-			header {
-				margin-left: -1em;
-				padding-left: 1em;
-				position: relative;
 			}
 
 			main {
@@ -232,7 +242,7 @@ themeColor: '#00000'
 				clip: auto;
 				height: auto;
 				width: auto;
-				right: calc(100% - 0.8em);
+				position: static;
 			}
 
 			.site-header {
@@ -255,21 +265,34 @@ themeColor: '#00000'
 
 			@media (prefers-reduced-motion) {
 				html {
-					scroll-behavior: auto;
-				}
-			}
-
-			@media (prefers-color-scheme: dark) {
-				:root {
-					--background-color: #1c1c1c;
-					--foreground-color: #fafaf5;
-					--link-color: yellow;
-					--target-color: #31301c;
+					scroll-behavior: auto !important;
 				}
 			}
 		</style>
     </head>
     <body>
+		<script>
+			function getTheme() {
+				const siteTheme = window.localStorage.getItem('theme')
+				const hasSiteTheme = typeof theme === 'string'
+
+				if (siteTheme) {
+					return siteTheme
+				}
+
+				const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+				const hasSystemTheme = typeof systemTheme.matches === 'boolean'
+
+				if (hasSystemTheme) {
+					return systemTheme.matches ? 'dark' : 'light'
+				}
+
+				return 'light'
+			}
+
+			document.documentElement.dataset.theme = getTheme()
+		</script>
+
         {% if hideSiteHeader != true %}
         <header class="site-header">
             <a href="/">Josh Smith</a>

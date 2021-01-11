@@ -302,5 +302,23 @@ themeColor: '#00000'
         <main id="main-content">
             {{ content }}
         </main>
+
+		<script>
+			function toggleUnstylishTheme(isUnstylish) {
+				Array.from(document.styleSheets).forEach((sheet) => {
+					sheet.disabled = isUnstylish
+				})
+			}
+
+			function unstylePageIfUnstylish() {
+				const theme = getTheme()
+
+				if (theme === 'unstylish') {
+					toggleUnstylishTheme(true)
+				}
+			}
+
+			unstylePageIfUnstylish()
+		</script>
     </body>
 </html>

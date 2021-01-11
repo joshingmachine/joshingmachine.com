@@ -25,10 +25,6 @@ title: Settings for joshingmachine.com
 		<noscript>
 			<p>You currently have JavaScript disabled. Typically that's totally fine by me, but unfortunately it's needed in order to make the functionality on this page work. You can follow <a href="https://enable-javascript.com/">these instructions</a> in order to enable JavaScript.</p>
 		</noscript>
-
-		<noscript>
-			<p>You
-		</noscript>
 	</div>
 
 	<template id="theme-source">
@@ -41,6 +37,11 @@ title: Settings for joshingmachine.com
 			<input name="theme" type="radio" value="light" />
 			<span>Light</span>
 		</label>
+
+		<label>
+			<input name="theme" type="radio" value="unstylish" />
+			<span>Unstylish</span>
+		</label>
 	</template>
 
 	<script>
@@ -50,7 +51,14 @@ title: Settings for joshingmachine.com
 		}
 
 		function onThemeClick(e) {
-			setTheme(e.target.value)
+			const currentTheme = getTheme()
+			const newTheme = e.target.value
+
+			if (currentTheme === 'unstylish' || newTheme === 'unstylish') {
+				toggleUnstylishTheme(newTheme === 'unstylish')
+			}
+
+			setTheme(newTheme)
 		}
 
 		function addEventListenersToThemeInputs(themeDestination) {

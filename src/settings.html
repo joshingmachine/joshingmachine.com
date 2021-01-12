@@ -10,6 +10,7 @@ title: Settings for joshingmachine.com
 	}
 
 	label {
+		display: block;
 		user-select: none;
 	}
 </style>
@@ -17,6 +18,65 @@ title: Settings for joshingmachine.com
 <header>
 	<h1>Settings</h1>
 </header>
+
+<fieldset>
+	<legend><h2>Font</h2></legend>
+
+	<div id="font-destination">
+		<noscript>
+			<p>You currently have JavaScript disabled. Typically that's totally fine by me, but unfortunately it's needed in order to make the functionality on this page work. You can follow <a href="https://enable-javascript.com/">these instructions</a> in order to enable JavaScript.</p>
+		</noscript>
+	</div>
+
+	<template id="font-source">
+		<label>
+			<input name="font" type="radio" value="default" />
+			<span>
+				<span style="font-family: 'Lato' !important;">Lato</span>
+				<span> / </span>
+				<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
+			</span>
+		</label>
+
+		<label>
+			<input name="font" type="radio" value="opendyslexic" />
+			<span style="font-family: 'OpenDyslexic' !important;">OpenDyslexic</span>
+		</label>
+	</template>
+
+	<script>
+		function setFont(font) {
+			localStorage.setItem('font', font)
+			document.documentElement.dataset.font = font
+		}
+
+		function onFontClick(e) {
+			setFont(e.target.value)
+		}
+
+		function addEventListenersToFontInputs(fontDestination) {
+			const currentFont = getFont()
+			const fontInputs = Array.from(fontDestination.getElementsByTagName('INPUT'))
+
+			fontInputs.forEach((input) => {
+				if (input.value === currentFont) {
+					input.checked = true;
+				}
+
+				input.addEventListener('click', onFontClick)
+			})
+		}
+
+		function initializeFontSettings() {
+			const fontDestination = document.getElementById('font-destination')
+			const fontSource = document.getElementById('font-source').content.cloneNode(true)
+			fontDestination.appendChild(fontSource)
+			addEventListenersToFontInputs(fontDestination)
+		}
+
+		initializeFontSettings()
+	</script>
+</fieldset>
 
 <fieldset>
 	<legend><h2>Theme</h2></legend>

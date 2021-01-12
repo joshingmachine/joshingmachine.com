@@ -147,6 +147,67 @@ themeColor: '#00000'
 				font-display: optional;
 			}
 
+			/* OpenDyslexic Regular */
+			@font-face {
+				font-family: 'OpenDyslexic';
+				font-style: normal;
+				font-weight: 400;
+				src: url('../fonts/opendyslexic/OpenDyslexic-Regular.eot'); /* IE9 Compat Modes */
+				src: local(''),
+				url('../fonts/opendyslexic/OpenDyslexic-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../fonts/opendyslexic/OpenDyslexic-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Regular.woff') format('woff'), /* Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Regular.otf') format('otf');
+				font-display: block;
+			}
+
+			/* OpenDyslexic Italic */
+			@font-face {
+				font-family: 'OpenDyslexic';
+				font-style: italic;
+				font-weight: 400;
+				src: url('../fonts/opendyslexic/OpenDyslexic-Italic.eot'); /* IE9 Compat Modes */
+				src: local(''),
+				url('../fonts/opendyslexic/OpenDyslexic-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../fonts/opendyslexic/OpenDyslexic-Italic.woff2') format('woff2'), /* Super Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Italic.woff') format('woff'), /* Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Italic.otf') format('otf');
+				font-display: block;
+			}
+
+			/* OpenDyslexic Bold */
+			@font-face {
+				font-family: 'OpenDyslexic';
+				font-style: normal;
+				font-weight: 700;
+				src: url('../fonts/opendyslexic/OpenDyslexic-Bold.eot'); /* IE9 Compat Modes */
+				src: local(''),
+				url('../fonts/opendyslexic/OpenDyslexic-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../fonts/opendyslexic/OpenDyslexic-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Bold.woff') format('woff'), /* Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Bold.otf') format('otf');
+				font-display: block;
+			}
+
+			/* OpenDyslexic Bold Italic */
+			@font-face {
+				font-family: 'OpenDyslexic';
+				font-style: italic;
+				font-weight: 700;
+				src: url('../fonts/opendyslexic/OpenDyslexic-Bold-Italic.eot'); /* IE9 Compat Modes */
+				src: local(''),
+				url('../fonts/opendyslexic/OpenDyslexic-Bold-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../fonts/opendyslexic/OpenDyslexic-Bold-Italic.woff2') format('woff2'), /* Super Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Bold-Italic.woff') format('woff'), /* Modern Browsers */
+				url('../fonts/opendyslexic/OpenDyslexic-Bold-Italic.otf') format('otf');
+				font-display: block;
+			}
+
+			:root {
+				--body-font-family: 'Libre Baskerville', 'Georgia', serif;
+				--heading-font-family: 'Lato', 'Arial', sans-serif;
+			}
+
 			:root[data-theme=""],
 			[data-theme="light"] {
 				--background-color: #fafaf5;
@@ -160,6 +221,11 @@ themeColor: '#00000'
 				--foreground-color: #fafaf5;
 				--link-color: #cece00;
 				--target-color: #2a2a00;
+			}
+
+			:root[data-font="opendyslexic"] {
+				--body-font-family: 'OpenDyslexic' !important;
+				--heading-font-family: 'OpenDyslexic' !important;
 			}
 
 			@media (prefers-color-scheme: dark) {
@@ -183,7 +249,7 @@ themeColor: '#00000'
 			html {
 				background-color: var(--background-color);
 				color: var(--foreground-color);
-				font-family: 'Libre Baskerville', 'Georgia', serif;
+				font-family: var(--body-font-family);
 				font-size: 20px;
 				font-size: clamp(18px, calc(14px + 1vw), 22px);
 				line-height: 1.5em;
@@ -200,7 +266,7 @@ themeColor: '#00000'
 			nav,
 			.site-header {
 				display: inline-block;
-				font-family: 'Lato', 'Arial', sans-serif;
+				font-family: var(--heading-font-family);
 			}
 
 			a {
@@ -272,9 +338,20 @@ themeColor: '#00000'
     </head>
     <body>
 		<script>
+			function getFont() {
+				const siteFont = window.localStorage.getItem('font')
+				const hasSiteFont = typeof siteFont === 'string'
+
+				if (siteFont) {
+					return siteFont
+				}
+
+				return 'default'
+			}
+
 			function getTheme() {
 				const siteTheme = window.localStorage.getItem('theme')
-				const hasSiteTheme = typeof theme === 'string'
+				const hasSiteTheme = typeof siteTheme === 'string'
 
 				if (siteTheme) {
 					return siteTheme
@@ -290,6 +367,7 @@ themeColor: '#00000'
 				return 'light'
 			}
 
+			document.documentElement.dataset.font = getFont()
 			document.documentElement.dataset.theme = getTheme()
 		</script>
 

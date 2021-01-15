@@ -10,8 +10,14 @@ title: Settings for joshingmachine.com
 	}
 
 	label {
+		cursor: pointer;
 		display: block;
 		user-select: none;
+	}
+
+	.fonts--unstylish {
+		display: none;
+		margin-top: 0;
 	}
 </style>
 
@@ -29,19 +35,23 @@ title: Settings for joshingmachine.com
 	</div>
 
 	<template id="font-source">
-		<label>
-			<input name="font" type="radio" value="default" />
-			<span>
-				<span style="font-family: 'Lato' !important;">Lato</span>
-				<span> / </span>
-				<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
-			</span>
-		</label>
+		<p class="fonts--unstylish">Fonts are disabled while using the "Unstylish" theme.</p>
 
-		<label>
-			<input name="font" type="radio" value="opendyslexic" />
-			<span style="font-family: 'OpenDyslexic' !important;">OpenDyslexic</span>
-		</label>
+		<div class="fonts--stylish">
+			<label>
+				<input name="font" type="radio" value="default" />
+				<span>
+					<span style="font-family: 'Lato' !important;">Lato</span>
+					<span> / </span>
+					<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
+				</span>
+			</label>
+
+			<label>
+				<input name="font" type="radio" value="opendyslexic" />
+				<span style="font-family: 'OpenDyslexic' !important;">OpenDyslexic</span>
+			</label>
+		</div>
 	</template>
 
 	<script>
@@ -52,6 +62,11 @@ title: Settings for joshingmachine.com
 
 		function onFontClick(e) {
 			setFont(e.target.value)
+		}
+
+		function addFontInputs(fontInputs, destination) {
+			const fontInputsCopy = fontInputs.content.cloneNode(true)
+			destination.appendChild(fontInputsCopy)
 		}
 
 		function addEventListenersToFontInputs(fontDestination) {
@@ -69,8 +84,11 @@ title: Settings for joshingmachine.com
 
 		function initializeFontSettings() {
 			const fontDestination = document.getElementById('font-destination')
-			const fontSource = document.getElementById('font-source').content.cloneNode(true)
-			fontDestination.appendChild(fontSource)
+			const fontSource = document.getElementById('font-source')
+
+			const fontSourceCopy = fontSource.content.cloneNode(true)
+			fontDestination.appendChild(fontSourceCopy)
+
 			addEventListenersToFontInputs(fontDestination)
 		}
 
@@ -115,7 +133,8 @@ title: Settings for joshingmachine.com
 			const newTheme = e.target.value
 
 			if (currentTheme === 'unstylish' || newTheme === 'unstylish') {
-				toggleUnstylishTheme(newTheme === 'unstylish')
+				const isUnstylish = newTheme === 'unstylish'
+				toggleUnstylishTheme(isUnstylish)
 			}
 
 			setTheme(newTheme)

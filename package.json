@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "build": "eleventy",
-		"lighthouse": "lhci autorun",
-		"pretest": "npm run build",
+    "lighthouse": "lhci autorun",
+    "pretest": "npm run build",
     "serve": "eleventy --serve",
     "test": "npm run lighthouse"
   },

@@ -6,3 +6,11 @@
 # Redirect default Netlify subdomain to primary domain
   from = "https://joshingmachine.netlify.com/*"
   to = "https://www.joshingmachine.com/:splat"
+
+[[redirects]]
+  from = "/capicola/"
+  to = "https://github.com/joshingmachine/capicola"
+
+[[redirects]]
+  from = "/kielbasa/"
+  to = "https://github.com/joshingmachine/kielbasa"

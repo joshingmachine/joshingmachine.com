@@ -1,12 +1,19 @@
 ---
+ageRating: 'General'
 layout: base.html
-title: Josh Smith's Accounts
+title: Josh Smith’s Accounts
 ---
 <style>
 	#account-list a {
+		border: none;
 		display: inline-block;
 		min-height: 44px;
 		min-width: 44px;
+		padding-top: 0.3em;
+	}
+
+	#account-list a > span {
+		border-bottom: 0.1em solid var(--link-color);
 	}
 
 	#account-nav {
@@ -18,10 +25,22 @@ title: Josh Smith's Accounts
 	}
 
 	#account-nav > * {
+		border: none;
 		display: flex;
 		justify-content: center;
 		min-height: 44px;
 		min-width: 44px;
+		padding-top: 0.3em;
+	}
+
+	#account-nav a > span {
+		height: 1.5em;
+		border-bottom: 0.1em solid var(--link-color);
+	}
+
+	#account-list a:hover > span,
+	#account-nav a:hover > span {
+		border-width: 0.2em;
 	}
 </style>
 
@@ -29,162 +48,162 @@ title: Josh Smith's Accounts
 
 <p>These are parts of the <span aria-label="web" role="img" title="web">🕸️</span> that I <span aria-label="surf" role="img" title="surf">🏄</span>.
 
-<p>Full disclosure, I don't use most of these services on a regular basis.</p>
+<p>Full disclosure, I don’t use most of these services on a regular basis.</p>
 
-<p>Also, I'm unlikely to connect/follow/friend people whom I don't know well. Sorry.</p>
+<p>Also, I’m unlikely to connect/follow/friend people whom I don't know well. Sorry.</p>
 
 <nav id="account-nav">
-	<a href="#a">A</a>
-	<a href="#b">B</a>
-	<a href="#c">C</a>
-	<a href="#d">D</a>
-	<a href="#e">E</a>
-	<a href="#f">F</a>
-	<a href="#g">G</a>
-	<a href="#h">H</a>
-	<a href="#i">I</a>
+	<a href="#a"><span>A</span></a>
+	<a href="#b"><span>B</span></a>
+	<a href="#c"><span>C</span></a>
+	<a href="#d"><span>D</span></a>
+	<a href="#e"><span>E</span></a>
+	<a href="#f"><span>F</span></a>
+	<a href="#g"><span>G</span></a>
+	<a href="#h"><span>H</span></a>
+	<a href="#i"><span>I</span></a>
 	<span>J</span>
-	<a href="#k">K</a>
-	<a href="#l">L</a>
-	<a href="#m">M</a>
-	<a href="#n">N</a>
+	<a href="#k"><span>K</span></a>
+	<a href="#l"><span>L</span></a>
+	<a href="#m"><span>M</span></a>
+	<a href="#n"><span>N</span></a>
 	<span>O</span>
-	<a href="#p">P</a>
+	<a href="#p"><span>P</span></a>
 	<span>Q</span>
-	<a href="#r">R</a>
-	<a href="#s">S</a>
-	<a href="#t">T</a>
-	<a href="#u">U</a>
-	<a href="#v">V</a>
-	<a href="#w">W</a>
+	<a href="#r"><span>R</span></a>
+	<a href="#s"><span>S</span></a>
+	<a href="#t"><span>T</span></a>
+	<a href="#u"><span>U</span></a>
+	<a href="#v"><span>V</span></a>
+	<a href="#w"><span>W</span></a>
 	<span>X</span>
-	<a href="#y">Y</a>
+	<a href="#y"><span>Y</span></a>
 	<span>Z</span>
 </nav>
 
 <ul id="account-list">
 	<template id="a"></template>
-	<li><a href="https://angel.co/u/joshingmachine">AngelList</a></li>
+	<li><a href="https://angel.co/u/joshingmachine"><span>AngelList</span></a></li>
 
 	<template id="b"></template>
-	<li><a href="https://joshingmachine.bandcamp.com/">Bandcamp</a></li>
-	<li><a href="https://boardgamegeek.com/user/joshingmachine">BoardGameGeek</a></li>
-	<li><a href="https://www.buymeacoffee.com/joshingmachine">Buy Me A Coffee</a></li>
+	<li><a href="https://joshingmachine.bandcamp.com/"><span>Bandcamp</span></a></li>
+	<li><a href="https://boardgamegeek.com/user/joshingmachine"><span>BoardGameGeek</span></a></li>
+	<li><a href="https://www.buymeacoffee.com/joshingmachine"><span>Buy Me A Coffee</span></a></li>
 
 	<template id="c"></template>
-	<li><a href="https://calendly.com/joshingmachine">Calendly</a></li>
-	<li><a href="https://cash.app/$joshingmachine">Cash App</a></li>
-	<li><a href="https://www.change.org/u/joshingmachine">Change.org</a></li>
-	<li><a href="https://www.codecademy.com/profiles/joshingmachinewastaken">Codeacademy</a></li>
-	<li><a href="https://codepen.io/joshingmachine">CodePen</a></li>
-	<li><a href="https://codesandbox.io/u/joshingmachine">CodeSandbox</a></li>
-	<li><a href="https://crates.io/users/joshingmachine">crates.io</a></li>
+	<li><a href="https://calendly.com/joshingmachine"><span>Calendly</span></a></li>
+	<li><a href="https://cash.app/$joshingmachine"><span>Cash App</span></a></li>
+	<li><a href="https://www.change.org/u/joshingmachine"><span>Change.org</span></a></li>
+	<li><a href="https://www.codecademy.com/profiles/joshingmachinewastaken"><span>Codeacademy</span></a></li>
+	<li><a href="https://codepen.io/joshingmachine"><span>CodePen</span></a></li>
+	<li><a href="https://codesandbox.io/u/joshingmachine"><span>CodeSandbox</span></a></li>
+	<li><a href="https://crates.io/users/joshingmachine"><span>crates.io</span></a></li>
 
 	<template id="d"></template>
-	<li><a href="https://dev.to/joshingmachine">DEV</a></li>
-	<li><a href="https://hub.docker.com/u/joshingmachine">Docker Hub</a></li>
-	<li><a href="https://www.duolingo.com/profile/joshingmachine">Duolingo</a></li>
+	<li><a href="https://dev.to/joshingmachine"><span>DEV</span></a></li>
+	<li><a href="https://hub.docker.com/u/joshingmachine"><span>Docker Hub</span></a></li>
+	<li><a href="https://www.duolingo.com/profile/joshingmachine"><span>Duolingo</span></a></li>
 
 	<template id="e"></template>
-	<li><a href="https://www.etsy.com/people/j8gpu0id">Etsy</a></li>
+	<li><a href="https://www.etsy.com/people/j8gpu0id"><span>Etsy</span></a></li>
 
 	<template id="f"></template>
-	<li><a href="https://www.facebook.com/joshingmachine">Facebook</a></li>
-	<li><a href="https://addons.mozilla.org/en-US/firefox/user/10754014/">Firefox</a></li>
-	<li><a href="https://www.fitbit.com/user/3ZT68J">Fitbit</a></li>
-	<li><a href="https://www.freecodecamp.org/joshingmachine">freeCodeCamp</a></li>
+	<li><a href="https://www.facebook.com/joshingmachine"><span>Facebook</span></a></li>
+	<li><a href="https://addons.mozilla.org/en-US/firefox/user/10754014/"><span>Firefox</span></a></li>
+	<li><a href="https://www.fitbit.com/user/3ZT68J"><span>Fitbit</span></a></li>
+	<li><a href="https://www.freecodecamp.org/joshingmachine"><span>freeCodeCamp</span></a></li>
 
 	<template id="g"></template>
-	<li><a href="https://www.github.com/joshingmachine">GitHub</a></li>
-	<li><a href="https://gitlab.com/joshingmachine">GitLab</a></li>
-	<li><a href="https://glitch.com/@joshingmachine">Glitch</a></li>
-	<li><a href="https://www.gofundme.com/profile/joshua-smith-jgc7n">GoFundMe</a></li>
-	<li><a href="https://www.goodreads.com/joshingmachine">Goodreads</a></li>
+	<li><a href="https://www.github.com/joshingmachine"><span>GitHub</span></a></li>
+	<li><a href="https://gitlab.com/joshingmachine"><span>GitLab</span></a></li>
+	<li><a href="https://glitch.com/@joshingmachine"><span>Glitch</span></a></li>
+	<li><a href="https://www.gofundme.com/profile/joshua-smith-jgc7n"><span>GoFundMe</span></a></li>
+	<li><a href="https://www.goodreads.com/joshingmachine"><span>Goodreads</span></a></li>
 
 	<template id="h"></template>
-	<li><a href="https://news.ycombinator.com/user?id=joshingmachine">Hacker News</a></li>
-	<li><a href="https://www.hackerrank.com/joshingmachine">HackerRank</a></li>
+	<li><a href="https://news.ycombinator.com/user?id=joshingmachine"><span>Hacker News</span></a></li>
+	<li><a href="https://www.hackerrank.com/joshingmachine"><span>HackerRank</span></a></li>
 
 	<template id="i"></template>
-	<li><a href="https://www.imdb.com/user/ur116715597/">IMDb</a></li>
-	<li><a href="https://www.indiehackers.com/joshingmachine">Indie Hackers</a></li>
-	<li><a href="https://www.indiegogo.com/individuals/23499079">Indiegogo</a></li>
-	<li><a href="https://www.instagram.com/joshingmachine">Instagram</a></li>
+	<li><a href="https://www.imdb.com/user/ur116715597/"><span>IMDb</span></a></li>
+	<li><a href="https://www.indiehackers.com/joshingmachine"><span>Indie Hackers</span></a></li>
+	<li><a href="https://www.indiegogo.com/individuals/23499079"><span>Indiegogo</span></a></li>
+	<li><a href="https://www.instagram.com/joshingmachine"><span>Instagram</span></a></li>
 
 	<template id="j"></template>
 
 	<template id="k"></template>
-	<li><a href="https://keybase.io/joshingmachine">Keybase</a></li>
-	<li><a href="https://www.khanacademy.org/profile/joshingmachine/">Khan Academy</a></li>
-	<li><a href="https://www.kickstarter.com/profile/joshingmachine">Kickstarter</a></li>
+	<li><a href="https://keybase.io/joshingmachine"><span>Keybase</span></a></li>
+	<li><a href="https://www.khanacademy.org/profile/joshingmachine/"><span>Khan Academy</span></a></li>
+	<li><a href="https://www.kickstarter.com/profile/joshingmachine"><span>Kickstarter</span></a></li>
 
 	<template id="l"></template>
-	<li><a href="https://launchpad.net/~joshingmachine">Launchpad</a></li>
-	<li><a href="https://www.linkedin.com/in/joshingmachine">LinkedIn</a></li>
+	<li><a href="https://launchpad.net/~joshingmachine"><span>Launchpad</span></a></li>
+	<li><a href="https://www.linkedin.com/in/joshingmachine"><span>LinkedIn</span></a></li>
 
 	<template id="m"></template>
-	<li><a href="https://medium.com/@joshingmachine">Medium</a></li>
-	<li><a href="https://www.meetup.com/members/211027849/">Meetup</a></li>
-	<li><a href="https://www.myfitnesspal.com/profile/joshingmachine">MyFitnessPal</a></li>
+	<li><a href="https://medium.com/@joshingmachine"><span>Medium</span></a></li>
+	<li><a href="https://www.meetup.com/members/211027849/"><span>Meetup</span></a></li>
+	<li><a href="https://www.myfitnesspal.com/profile/joshingmachine"><span>MyFitnessPal</span></a></li>
 
 	<template id="n"></template>
 	<li>Nintendo Switch Friend Code: SW-6333-9759-3496</li>
-	<li><a href="https://www.npmjs.com/~joshingmachine">npm</a></li>
+	<li><a href="https://www.npmjs.com/~joshingmachine"><span>npm</span></a></li>
 
 	<template id="o"></template>
 
 	<template id="p"></template>
-	<li><a href="https://packagist.org/users/joshingmachine/">Packagist</a></li>
-	<li><a href="https://www.papercall.io/speakers/joshingmachine">PaperCall</a></li>
-	<li><a href="https://www.patreon.com/joshingmachine">Patreon</a></li>
-	<li><a href="https://www.paypal.me/joshingmachine">PayPal</a></li>
-	<li><a href="https://www.pinterest.com/joshingmachinewastaken/">Pinterest</a></li>
-	<li><a href="https://getpocket.com/@joshingmachine">Pocket</a></li>
-	<li><a href="https://www.producthunt.com/@joshingmachine">Product Hunt</a></li>
-	<li><a href="https://pypi.org/user/joshingmachine/">PyPI</a></li>
+	<li><a href="https://packagist.org/users/joshingmachine/"><span>Packagist</span></a></li>
+	<li><a href="https://www.papercall.io/speakers/joshingmachine"><span>PaperCall</span></a></li>
+	<li><a href="https://www.patreon.com/joshingmachine"><span>Patreon</span></a></li>
+	<li><a href="https://www.paypal.me/joshingmachine"><span>PayPal</span></a></li>
+	<li><a href="https://www.pinterest.com/joshingmachinewastaken/"><span>Pinterest</span></a></li>
+	<li><a href="https://getpocket.com/@joshingmachine"><span>Pocket</span></a></li>
+	<li><a href="https://www.producthunt.com/@joshingmachine"><span>Product Hunt</span></a></li>
+	<li><a href="https://pypi.org/user/joshingmachine/"><span>PyPI</span></a></li>
 
 	<template id="q"></template>
 
 	<template id="r"></template>
-	<li><a href="https://www.reddit.com/user/joshingmachine">Reddit</a></li>
-	<li><a href="https://app.roll20.net/users/1481831/joshingmachine">Roll20</a></li>
-	<li><a href="https://rubygems.org/profiles/joshingmachine">RubyGems</a></li>
+	<li><a href="https://www.reddit.com/user/joshingmachine"><span>Reddit</span></a></li>
+	<li><a href="https://app.roll20.net/users/1481831/joshingmachine"><span>Roll20</span></a></li>
+	<li><a href="https://rubygems.org/profiles/joshingmachine"><span>RubyGems</span></a></li>
 
 	<template id="s"></template>
-	<li><a href="https://sessionize.com/joshingmachine/">Sessionize</a></li>
-	<li><a href="https://slides.com/joshingmachine">Slides</a></li>
-	<li><a href="https://www.snapchat.com/add/joshingmachine">Snapchat</a></li>
-	<li><a href="https://www.songkick.com/users/joshingmachine">Songkick</a></li>
-	<li><a href="https://www.soundcloud.com/joshingmachine">SoundCloud</a></li>
-	<li><a href="https://sourceforge.net/u/joshingmachine/profile/">SourceForge</a></li>
-	<li><a href="https://speakerdeck.com/joshingmachine">Speaker Deck</a></li>
-	<li><a href="https://www.sporcle.com/user/joshingmachine/">Sporcle</a></li>
-	<li><a href="https://open.spotify.com/user/joshingmachine">Spotify</a></li>
-	<li><a href="https://stackoverflow.com/users/1548734/joshingmachine">Stack Overflow</a></li>
-	<li><a href="https://steamcommunity.com/id/joshingmachine/">Steam</a></li>
-	<li><a href="https://app.thestorygraph.com/profile/0913ad5b-96a5-419e-83dd-6d5ab99bf04f">The StoryGraph</a></li>
+	<li><a href="https://sessionize.com/joshingmachine/"><span>Sessionize</span></a></li>
+	<li><a href="https://slides.com/joshingmachine"><span>Slides</span></a></li>
+	<li><a href="https://www.snapchat.com/add/joshingmachine"><span>Snapchat</span></a></li>
+	<li><a href="https://www.songkick.com/users/joshingmachine"><span>Songkick</span></a></li>
+	<li><a href="https://www.soundcloud.com/joshingmachine"><span>SoundCloud</span></a></li>
+	<li><a href="https://sourceforge.net/u/joshingmachine/profile/"><span>SourceForge</span></a></li>
+	<li><a href="https://speakerdeck.com/joshingmachine"><span>Speaker Deck</span></a></li>
+	<li><a href="https://www.sporcle.com/user/joshingmachine/"><span>Sporcle</span></a></li>
+	<li><a href="https://open.spotify.com/user/joshingmachine"><span>Spotify</span></a></li>
+	<li><a href="https://stackoverflow.com/users/1548734/joshingmachine"><span>Stack Overflow</span></a></li>
+	<li><a href="https://steamcommunity.com/id/joshingmachine/"><span>Steam</span></a></li>
+	<li><a href="https://app.thestorygraph.com/profile/0913ad5b-96a5-419e-83dd-6d5ab99bf04f"><span>The StoryGraph</span></a></li>
 
 	<template id="t"></template>
-	<li><a href="https://www.tiktok.com/@joshingmachinewastaken">TikTok</a></li>
-	<li><a href="https://trello.com/joshingmachine">Trello</a></li>
-	<li><a href="https://www.twitch.tv/joshingmachine">Twitch</a></li>
-	<li><a href="https://www.twitter.com/joshingmachine">Twitter</a></li>
+	<li><a href="https://www.tiktok.com/@joshingmachinewastaken"><span>TikTok</span></a></li>
+	<li><a href="https://trello.com/joshingmachine"><span>Trello</span></a></li>
+	<li><a href="https://www.twitch.tv/joshingmachine"><span>Twitch</span></a></li>
+	<li><a href="https://www.twitter.com/joshingmachine"><span>Twitter</span></a></li>
 
 	<template id="u"></template>
-	<li><a href="https://www.udemy.com/user/josh-smith-274/">Udemy</a></li>
+	<li><a href="https://www.udemy.com/user/josh-smith-274/"><span>Udemy</span></a></li>
 
 	<template id="v"></template>
-	<li><a href="https://venmo.com/joshingmachine">Venmo</a></li>
-	<li><a href="https://vimeo.com/joshingmachine">Vimeo</a></li>
+	<li><a href="https://venmo.com/joshingmachine"><span>Venmo</span></a></li>
+	<li><a href="https://vimeo.com/joshingmachine"><span>Vimeo</span></a></li>
 
 	<template id="w"></template>
-	<li><a href="https://en.wikipedia.org/wiki/User:Joshingmachine">Wikipedia</a></li>
+	<li><a href="https://en.wikipedia.org/wiki/User:Joshingmachine"><span>Wikipedia</span></a></li>
 
 	<template id="x"></template>
 
 	<template id="y"></template>
-	<li><a href="https://www.yelp.com/user_details?userid=_WmSBz0wvrOXpwlIXC1KKA">Yelp</a></li>
-	<li><a href="https://www.youtube.com/channel/UCtaFvyu_i4va-UltcqdIS8g">YouTube</a></li>
+	<li><a href="https://www.yelp.com/user_details?userid=_WmSBz0wvrOXpwlIXC1KKA"><span>Yelp</span></a></li>
+	<li><a href="https://www.youtube.com/channel/UCtaFvyu_i4va-UltcqdIS8g"><span>YouTube</span></a></li>
 
 	<template id="z"></template>
 </ul>
@@ -213,7 +232,8 @@ title: Josh Smith's Accounts
 
 	const onClick = (e) => {
 		clearHighlights()
-		const id = e.target.hash.substring(1)
+		const link = e.target.tagName === 'SPAN' ? e.target.parentNode : e.target
+		const id = link.hash.substring(1)
 		const destination = document.getElementById(id)
 		const firstElement = destination.nextElementSibling
 		highlightElement(firstElement)

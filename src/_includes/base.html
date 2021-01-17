@@ -1,6 +1,6 @@
 ---
 ageRating: 'General'
-description: "Josh Smith's personal website."
+description: "Josh Smith’s personal website."
 themeColor: '#00000'
 ---
 <!DOCTYPE html>
@@ -212,7 +212,7 @@ themeColor: '#00000'
 			[data-theme="light"] {
 				--background-color: #fafaf5;
 				--foreground-color: #1c1c1c;
-				--link-color: #0000ee;
+				--link-color: #3d3dd7;
 				--target-color: #fffe92;
 			}
 
@@ -269,7 +269,13 @@ themeColor: '#00000'
 			}
 
 			a {
+				border-bottom: 0.1em solid var(--link-color);
 				color: var(--link-color);
+				text-decoration: none;
+			}
+
+			a:hover {
+				border-width: 0.2em;
 			}
 
 			a:focus {
@@ -313,6 +319,10 @@ themeColor: '#00000'
 			.site-header {
 				margin-bottom: 1em;
 				margin-bottom: clamp(0em, calc(2em - 3vw), 1em);
+			}
+
+			.site-header__home-link {
+				color: var(--foreground-color);
 			}
 
 			@media (hover: hover) {
@@ -372,7 +382,7 @@ themeColor: '#00000'
 
         {% if hideSiteHeader != true %}
         <header class="site-header">
-            <a href="/">Josh Smith</a>
+            <a class="site-header__home-link" href="/">Josh Smith</a>
         </header>
         {% endif %}
 

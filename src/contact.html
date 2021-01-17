@@ -12,9 +12,12 @@ title: Contact Josh Smith
 	}
 
 	button {
-		margin-left: auto;
 		background-color: var(--background-color);
+		border: 1px solid;
 		color: var(--foreground-color);
+		cursor: pointer;
+		margin-left: auto;
+		padding: 0.5em;
 	}
 
 	button:focus {
@@ -22,13 +25,20 @@ title: Contact Josh Smith
 		color: var(--background-color);
 	}
 
+	hr {
+		border: 1px solid;
+		color: var(--foreground-color);
+	}
+
 	input {
+		border: 1px solid;
 		font-family: inherit;
 		font-size: inherit;
 		width: 100%;
 	}
 
 	textarea {
+		border: 1px solid;
 		font-family: inherit;
 		font-size: inherit;
 		height: 5em;
@@ -43,7 +53,9 @@ title: Contact Josh Smith
 
 <p>If it's more convenient, you can send me a message using <a href="#form">the form</a> at the end of this page. Please include a valid email address so I can respond.</p>
 
-<p>As a last resort, you can try to reach me via one of my <a href="/accounts/">accounts</a>, but no guarantees I'll see your message in a timely fashion.</p>
+<p>As a last resort, you can try to reach me via one of my <a href="/accounts/">accounts</a>, but there is no guarantee I'll see your message in a timely fashion.</p>
+
+<hr>
 
 <form
 	data-netlify="true"

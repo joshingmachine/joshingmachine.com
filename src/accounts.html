@@ -19,18 +19,28 @@ title: Josh Smith’s Accounts
 	#account-nav {
 		display: flex;
 		flex-wrap: wrap;
-		/* (26 letters in the alphabet / 2) * 44px */
-		max-width: 572px;
+		margin: 0;
+		max-width: 572px; /* 26 letters / 2 * 44px */
+		padding: 0;
 		width: 100%;
 	}
 
-	#account-nav > * {
-		border: none;
+	#account-nav > li {
 		display: flex;
 		justify-content: center;
 		min-height: 44px;
 		min-width: 44px;
+	}
+
+	#account-nav > li > * {
+		height: 100%;
 		padding-top: 0.3em;
+		text-align: center;
+		width: 100%;
+	}
+
+	#account-nav a {
+		border: none;
 	}
 
 	#account-nav a > span {
@@ -52,33 +62,35 @@ title: Josh Smith’s Accounts
 
 <p>Also, I’m unlikely to connect/follow/friend people whom I don't know well. Sorry.</p>
 
-<nav id="account-nav">
-	<a href="#a"><span>A</span></a>
-	<a href="#b"><span>B</span></a>
-	<a href="#c"><span>C</span></a>
-	<a href="#d"><span>D</span></a>
-	<a href="#e"><span>E</span></a>
-	<a href="#f"><span>F</span></a>
-	<a href="#g"><span>G</span></a>
-	<a href="#h"><span>H</span></a>
-	<a href="#i"><span>I</span></a>
-	<span>J</span>
-	<a href="#k"><span>K</span></a>
-	<a href="#l"><span>L</span></a>
-	<a href="#m"><span>M</span></a>
-	<a href="#n"><span>N</span></a>
-	<span>O</span>
-	<a href="#p"><span>P</span></a>
-	<span>Q</span>
-	<a href="#r"><span>R</span></a>
-	<a href="#s"><span>S</span></a>
-	<a href="#t"><span>T</span></a>
-	<a href="#u"><span>U</span></a>
-	<a href="#v"><span>V</span></a>
-	<a href="#w"><span>W</span></a>
-	<span>X</span>
-	<a href="#y"><span>Y</span></a>
-	<span>Z</span>
+<nav>
+	<ul id="account-nav">
+		<li><a href="#a"><span>A</span></a></li>
+		<li><a href="#b"><span>B</span></a></li>
+		<li><a href="#c"><span>C</span></a></li>
+		<li><a href="#d"><span>D</span></a></li>
+		<li><a href="#e"><span>E</span></a></li>
+		<li><a href="#f"><span>F</span></a></li>
+		<li><a href="#g"><span>G</span></a></li>
+		<li><a href="#h"><span>H</span></a></li>
+		<li><a href="#i"><span>I</span></a></li>
+		<li><span>J</span></li>
+		<li><a href="#k"><span>K</span></a></li>
+		<li><a href="#l"><span>L</span></a></li>
+		<li><a href="#m"><span>M</span></a></li>
+		<li><a href="#n"><span>N</span></a></li>
+		<li><span>O</span></li>
+		<li><a href="#p"><span>P</span></a></li>
+		<li><span>Q</span></li>
+		<li><a href="#r"><span>R</span></a></li>
+		<li><a href="#s"><span>S</span></a></li>
+		<li><a href="#t"><span>T</span></a></li>
+		<li><a href="#u"><span>U</span></a></li>
+		<li><a href="#v"><span>V</span></a></li>
+		<li><a href="#w"><span>W</span></a></li>
+		<li><span>X</span></li>
+		<li><a href="#y"><span>Y</span></a></li>
+		<li><span>Z</span></li>
+	</ul>
 </nav>
 
 <ul id="account-list">

@@ -19,14 +19,39 @@ title: Settings for joshingmachine.com
 		display: none;
 		margin-top: 0;
 	}
+
+	.option--defaultfont,
+	.option--defaultfont * {
+		font-family: 'Libre Baskerville';
+	}
+
+	.option--opendyslexic,
+	.option--opendyslexic * {
+		font-family: 'OpenDyslexic' !important;
+	}
+
+	.option--opendyslexic p {
+		padding-left: 1em;
+	}
+
+	.option--unstylish,
+	.option--unstylish * {
+		font-family: initial !important;
+	}
+
+	.option--dark,
+	.option--light {
+		background-color: var(--background-color) !important;
+		color: var(--foreground-color) !important;
+	}
 </style>
 
 <header>
 	<h1>Settings</h1>
 </header>
 
-<fieldset>
-	<legend><h2>Font</h2></legend>
+<fieldset id="font">
+	<legend><h2>Default Fonts</h2></legend>
 
 	<div id="font-destination">
 		<noscript>
@@ -38,19 +63,23 @@ title: Settings for joshingmachine.com
 		<p class="fonts--unstylish">Fonts are disabled while using the "Unstylish" theme.</p>
 
 		<div class="fonts--stylish">
-			<label>
-				<input name="font" type="radio" value="default" />
-				<span>
-					<span style="font-family: 'Lato' !important;">Lato</span>
-					<span> / </span>
-					<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
-				</span>
-			</label>
+			<div class="option--defaultfont">
+				<label>
+					<input name="font" type="radio" value="default" />
+					<span>
+						<span style="font-family: 'Lato' !important;">Lato</span>
+						<span> / </span>
+						<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
+					</span>
+				</label>
+			</div>
 
-			<label>
-				<input name="font" type="radio" value="opendyslexic" />
-				<span style="font-family: 'OpenDyslexic' !important;">OpenDyslexic</span>
-			</label>
+			<div class="option--opendyslexic">
+				<label>
+					<input name="font" type="radio" value="opendyslexic" /><span>OpenDyslexic</span>
+				</label>
+				<p>OpenDyslexic is a typeface by <a href="https://abbiecod.es">Abbie Gonzales</a>, designed against some common symptoms of dyslexia. <a href="https://opendyslexic.org/">Check out its website</a> and consider making a <a href="https://gumroad.com/l/OpenDyslexic">one-time</a> or <a href="https://www.patreon.com/opendyslexic">recurring</a> donation.</p>
+			</div>
 		</div>
 	</template>
 
@@ -96,7 +125,7 @@ title: Settings for joshingmachine.com
 	</script>
 </fieldset>
 
-<fieldset>
+<fieldset id="theme">
 	<legend><h2>Theme</h2></legend>
 
 	<div id="theme-destination">
@@ -106,20 +135,26 @@ title: Settings for joshingmachine.com
 	</div>
 
 	<template id="theme-source">
-		<label>
-			<input name="theme" type="radio" value="dark" />
-			<span>Dark</span>
-		</label>
+		<div class="option--dark" data-theme="dark">
+			<label>
+				<input name="theme" type="radio" value="dark" />
+				<span>Dark</span>
+			</label>
+		</div>
 
-		<label>
-			<input name="theme" type="radio" value="light" />
-			<span>Light</span>
-		</label>
+		<div class="option--light" data-theme="light">
+			<label>
+				<input name="theme" type="radio" value="light" />
+				<span>Light</span>
+			</label>
+		</div>
 
-		<label>
-			<input name="theme" type="radio" value="unstylish" />
-			<span>Unstylish</span>
-		</label>
+		<div class="option--unstylish">
+			<label>
+				<input name="theme" type="radio" value="unstylish" />
+				<span>Unstylish</span>
+			</label>
+		</div>
 	</template>
 
 	<script>

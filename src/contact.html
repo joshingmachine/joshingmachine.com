@@ -12,12 +12,18 @@ title: Contact Josh Smith
 	}
 
 	button {
-		background-color: inherit;
+		background-color: var(--background-color);
 		border: 1px solid;
 		color: var(--foreground-color);
 		cursor: pointer;
 		margin-left: auto;
 		padding: 0.5em;
+		transition: filter 200ms ease-out;
+	}
+
+	button:focus,
+	button:hover {
+		filter: drop-shadow(0 0 0.5em black);
 	}
 
 	button:focus {

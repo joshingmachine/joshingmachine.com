@@ -30,13 +30,38 @@ title: Settings for joshingmachine.com
 		font-family: 'OpenDyslexic' !important;
 	}
 
-	.option--opendyslexic p {
-		padding-left: 1em;
+	[class^="option--"] {
+		background-color: var(--background-color);
+		border: solid black 2px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 5em;
+		padding: 1rem 0.5rem;
+		transition: filter 200ms ease-out;
+	}
+
+	[class^="option--"]:hover,
+	[class^="option--"]:focus-within {
+		filter: drop-shadow(0 0 0.5em black);
+	}
+
+	[class^="option--"] + [class^="option--"] {
+		margin-top: 0.5rem;
+	}
+
+	[class^="option--"] p {
+		font-size: 0.8em;
+		margin: 0;
+		padding-left: 1.5em;
 	}
 
 	.option--unstylish,
 	.option--unstylish * {
+		background-color: white !important;
+		color: initial !important;
 		font-family: initial !important;
+		font-size: initial !important;
 	}
 
 	.option--dark,
@@ -72,6 +97,7 @@ title: Settings for joshingmachine.com
 						<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
 					</span>
 				</label>
+				<p>Sans-serif font for headings, labels, and inputs. Serif for all other text.</p>
 			</div>
 
 			<div class="option--opendyslexic">
@@ -137,23 +163,23 @@ title: Settings for joshingmachine.com
 	<template id="theme-source">
 		<div class="option--dark" data-theme="dark">
 			<label>
-				<input name="theme" type="radio" value="dark" />
-				<span>Dark</span>
+				<input name="theme" type="radio" value="dark" /><span>Dark</span>
 			</label>
+			<p>Bold and mysterious.</p>
 		</div>
 
 		<div class="option--light" data-theme="light">
 			<label>
-				<input name="theme" type="radio" value="light" />
-				<span>Light</span>
+				<input name="theme" type="radio" value="light" /><span>Light</span>
 			</label>
+			<p>Crisp and refreshing.</p>
 		</div>
 
-		<div class="option--unstylish">
+		<div class="option--unstylish" data-theme="unstylish">
 			<label>
-				<input name="theme" type="radio" value="unstylish" />
-				<span>Unstylish</span>
+				<input name="theme" type="radio" value="unstylish" /><span>Unstylish</span>
 			</label>
+			<p>All stylesheets and inline styles on the website are disabled. The user-agent styles are the only styles that are applied.</p>
 		</div>
 	</template>
 

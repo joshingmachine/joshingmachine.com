@@ -210,6 +210,7 @@ themeColor: '#1c1c1c'
 			:root {
 				--body-font-family: 'Libre Baskerville', 'Georgia', serif;
 				--heading-font-family: 'Lato', 'Arial', sans-serif;
+				--line-height: 1.5em;
 			}
 
 			:root[data-theme=""],
@@ -230,6 +231,7 @@ themeColor: '#1c1c1c'
 			:root[data-font="opendyslexic"] {
 				--body-font-family: 'OpenDyslexic' !important;
 				--heading-font-family: 'OpenDyslexic' !important;
+				--line-height: 2em;
 			}
 
 			@media (prefers-color-scheme: dark) {
@@ -255,7 +257,7 @@ themeColor: '#1c1c1c'
 				font-family: var(--body-font-family);
 				font-size: 20px;
 				font-size: clamp(18px, calc(14px + 1vw), 22px);
-				line-height: 1.5em;
+				line-height: var(--line-height);
 				scroll-behavior: smooth;
 			}
 

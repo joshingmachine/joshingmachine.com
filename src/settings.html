@@ -5,6 +5,11 @@ layout: base.html
 title: Settings for joshingmachine.com
 ---
 <style>
+	fieldset {
+		border: none;
+		padding: 0;
+	}
+
 	fieldset + fieldset {
 		margin-top: 1em;
 	}
@@ -12,7 +17,21 @@ title: Settings for joshingmachine.com
 	label {
 		cursor: pointer;
 		display: block;
+		margin-bottom: 0.5em;
 		user-select: none;
+	}
+
+	label::after {
+		bottom: 0;
+		content: '';
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	legend {
+		display: inline-block;
 	}
 
 	.fonts--unstylish {
@@ -34,11 +53,18 @@ title: Settings for joshingmachine.com
 		background-color: var(--background-color);
 		border: solid black 2px;
 		display: flex;
+		filter: drop-shadow(0 0 0.1em black);
 		flex-direction: column;
 		justify-content: center;
 		min-height: 5em;
-		padding: 1rem 0.5rem;
+		padding: 1rem;
+		position: relative;
 		transition: filter 200ms ease-out;
+	}
+
+	input:checked + [class^="option--"] {
+		border: solid var(--link-color) 0.25rem;
+		padding: 0.75rem;
 	}
 
 	[class^="option--"]:hover,
@@ -46,28 +72,37 @@ title: Settings for joshingmachine.com
 		filter: drop-shadow(0 0 0.5em black);
 	}
 
-	[class^="option--"] + [class^="option--"] {
+	[class^="option--"] ~ [class^="option--"] {
 		margin-top: 0.5rem;
 	}
 
 	[class^="option--"] p {
 		font-size: 0.8em;
 		margin: 0;
-		padding-left: 1.5em;
+		position: relative;
 	}
 
 	.option--unstylish,
 	.option--unstylish * {
-		background-color: white !important;
-		color: initial !important;
-		font-family: initial !important;
+		color: initial;
+		background-color: white;
+		font-family: initial;
 		font-size: initial !important;
 	}
 
+	.option--unstylish a {
+		color: blue;
+		border: none !important;
+		text-decoration: underline !important;
+		transition: none;
+	}
+
 	.option--dark,
-	.option--light {
+	.option--light,
+    .option--opendyslexic {
 		background-color: var(--background-color) !important;
 		color: var(--foreground-color) !important;
+		line-height: var(--line-height);
 	}
 </style>
 
@@ -76,7 +111,13 @@ title: Settings for joshingmachine.com
 </header>
 
 <fieldset id="font">
-	<legend><h2>Default Fonts</h2></legend>
+	<header>
+		<legend><h2>Default Fonts</h2></legend>
+		<a class="anchor-link" href="#font">
+			<span aria-hidden="true">#</span>
+			<span class="visually-hidden">Link to "Default Fonts" section</span>
+		</a>
+	</header>
 
 	<div id="font-destination">
 		<noscript>
@@ -88,24 +129,24 @@ title: Settings for joshingmachine.com
 		<p class="fonts--unstylish">Fonts are disabled while using the "Unstylish" theme.</p>
 
 		<div class="fonts--stylish">
-			<div class="option--defaultfont">
-				<label>
-					<input name="font" type="radio" value="default" />
-					<span>
-						<span style="font-family: 'Lato' !important;">Lato</span>
-						<span> / </span>
-						<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
-					</span>
+			<input class="visually-hidden" id="font-default" name="font" type="radio" value="default" />
+			<span class="option--defaultfont">
+				<label for="font-default">
+					<span style="font-family: 'Lato' !important;">Lato</span>
+					<span> / </span>
+					<span style="font-family: 'Libre Baskerville' !important;">Libre Baskerville</span>
 				</label>
 				<p>Sans-serif font for headings, labels, and inputs. Serif for all other text.</p>
-			</div>
+			</span>
 
-			<div class="option--opendyslexic">
-				<label>
-					<input name="font" type="radio" value="opendyslexic" /><span>OpenDyslexic</span>
+			<input class="visually-hidden" id="font-opendyslexic" name="font" type="radio" value="opendyslexic" />
+
+			<span class="option--opendyslexic" data-font="opendyslexic">
+				<label for="font-opendyslexic">
+					OpenDyslexic
 				</label>
 				<p>OpenDyslexic is a typeface by <a href="https://abbiecod.es">Abbie Gonzales</a>, designed against some common symptoms of dyslexia. <a href="https://opendyslexic.org/">Check out its website</a> and consider making a <a href="https://gumroad.com/l/OpenDyslexic">one-time</a> or <a href="https://www.patreon.com/opendyslexic">recurring</a> donation.</p>
-			</div>
+			</span>
 		</div>
 	</template>
 
@@ -152,7 +193,13 @@ title: Settings for joshingmachine.com
 </fieldset>
 
 <fieldset id="theme">
-	<legend><h2>Theme</h2></legend>
+	<header>
+		<legend><h2>Theme</h2></legend>
+		<a class="anchor-link" href="#theme">
+			<span aria-hidden="true">#</span>
+			<span class="visually-hidden">Link to "Theme" section</span>
+		</a>
+	</header>
 
 	<div id="theme-destination">
 		<noscript>
@@ -161,26 +208,26 @@ title: Settings for joshingmachine.com
 	</div>
 
 	<template id="theme-source">
-		<div class="option--dark" data-theme="dark">
-			<label>
-				<input name="theme" type="radio" value="dark" /><span>Dark</span>
-			</label>
+		<input class="visually-hidden" id="theme-dark" name="theme" type="radio" value="dark" />
+
+		<span class="option--dark" data-theme="dark">
+			<label for="theme-dark">Dark</label>
 			<p>Bold and mysterious.</p>
-		</div>
+		</span>
 
-		<div class="option--light" data-theme="light">
-			<label>
-				<input name="theme" type="radio" value="light" /><span>Light</span>
-			</label>
+		<input class="visually-hidden" id="theme-light" name="theme" type="radio" value="light" />
+
+		<span class="option--light" data-theme="light">
+			<label for="theme-light">Light</label>
 			<p>Crisp and refreshing.</p>
-		</div>
+		</span>
 
-		<div class="option--unstylish" data-theme="unstylish">
-			<label>
-				<input name="theme" type="radio" value="unstylish" /><span>Unstylish</span>
-			</label>
-			<p>All stylesheets and inline styles on the website are disabled. The user-agent styles are the only styles that are applied.</p>
-		</div>
+		<input class="visually-hidden" id="theme-unstylish" name="theme" type="radio" value="unstylish" />
+
+		<span class="option--unstylish" data-theme="unstylish">
+			<label for="theme-unstylish">Unstylish</label>
+			<p>All stylesheets and inline styles on the website are disabled. The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade#user-agent_stylesheets">user-agent styles</a> are the only styles that are applied.</p>
+		</span>
 	</template>
 
 	<script>

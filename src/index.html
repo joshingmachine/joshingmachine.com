@@ -5,12 +5,12 @@ title: Josh Smith
 ---
 <h1>Josh Smith</h1>
 
-<p>Engineering manager at <a href="https://www.niche.com">Niche</a>. <span id="descriptor">Lifelong <a href="https://en.wikipedia.org/wiki/Yinzer">yinzer</a>.</span> He/him.</p>
+<p>Engineering manager at <a href="https://www.niche.com">Niche</a>. <span id="description">Lifelong <a href="https://en.wikipedia.org/wiki/Yinzer">yinzer</a>.</span> He/him.</p>
 
 <script>
-	function generateDescriptor(givenIndex) {
-		const descriptorNode = document.getElementById('descriptor')
-		const possibleDescriptors = [
+	function getRandomDescription(givenIndex) {
+		const descriptionNode = document.getElementById('description')
+		const descriptions = [
 			"Leslie Knope’s optimism, Ben Wyatt’s nerdiness, and Ron Swanson’s diet.",
 			'Black Lives Matter.',
 			'Go <a href="https://en.wikipedia.org/w/index.php?title=Stillers&redirect=no">Stillers</a>.',
@@ -18,7 +18,7 @@ title: Josh Smith
 			'Go Pens.',
 			'Hufflepuff.',
 			'Lifelong <a href="https://en.wikipedia.org/wiki/Yinzer">yinzer</a>.',
-			'Makes a mean omelette.',
+			'Makes a mean burger.',
 			'<code>npx <a href="https://www.npmjs.com/package/joshingmachine">joshingmachine</a></code>.',
 			'Registered voter (<a href="https://vote.gov/">as you should be too</a>).',
 			'Tall.',
@@ -26,12 +26,12 @@ title: Josh Smith
 			'[object Object].<!-- Made you look! This is intentional, check out the array below. -->',
 			'Stuck in <a href="https://www.vim.org/">vim</a> since 2018.',
 		]
-		const randomIndex = givenIndex || Math.floor(Math.random() * possibleDescriptors.length)
-		const newDescriptor = possibleDescriptors[randomIndex]
-		descriptorNode.innerHTML = newDescriptor
+		const randomIndex = givenIndex || Math.floor(Math.random() * descriptions.length)
+		const randomDescription = descriptions[randomIndex]
+		descriptionNode.innerHTML = randomDescription
 	}
 
-	generateDescriptor()
+	getRandomDescription()
 </script>
 
 <nav>

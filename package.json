@@ -17,9 +17,9 @@
   },
   "homepage": "https://www.joshingmachine.com",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0"
+    "@11ty/eleventy": "^0.12.1"
   },
   "dependencies": {
-    "@lhci/cli": "^0.6.1"
+    "@lhci/cli": "^0.7.2"
   }
 }
